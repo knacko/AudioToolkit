@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.AudioToolkit.CustomViews.BoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_root"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_frame_dark"
+    android:padding="12dp"
+    android:layout_margin="30dp"
+    app:bll_width="@integer/dialogMaxWidth" />
+        
+
+    

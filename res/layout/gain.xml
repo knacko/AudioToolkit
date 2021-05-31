@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_background_tiled" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.AudioToolkit.CustomViews.BoundedLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:bll_width="@integer/tabsMaxWidth" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/titlebar"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Amp. &amp; Power"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Audio Toolkit"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tabStripEnabled="false" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                android:background="@drawable/bg_midground_tiled" >
+
+                <ScrollView
+                    android:id="@+id/gain_gain"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_above="@+id/adspace"
+                    android:orientation="vertical" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:id="@+id/widget170"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Amplifier Specs:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/inputwatts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Amp. Rating"
+                            app:units="watts RMS" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/inputload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Amp. Load"
+                            app:units="ohms" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" 
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+                            <Button
+                                android:id="@+id/calculate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Calculate"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/clear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="  Clear  "
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/outputload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Line Output"
+                            app:edittable="false"
+                            app:units="volts AC" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="2dip"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="#FF696969" />
+
+                        <LinearLayout
+                            android:id="@+id/widget49"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/widget170"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Speaker Type:"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <RadioGroup
+                                android:id="@+id/radios"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/midrange"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:checked="true"
+                                    android:text="Mid Range"
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/subwoofer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="Subwoofer  "
+                                    android:textSize="16sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <Button
+                                android:id="@+id/generate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Generate Test Tone"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/stop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="  Stop  "
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/conversion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter 2 of the following values:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/volts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Voltage"
+                            app:units="volts" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/watts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Wattage"
+                            app:units="watts" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/amps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Amperage"
+                            app:units="amps" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/ohms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Resistance"
+                            app:units="ohms" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <Button
+                                android:id="@+id/conv_calculate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Calculate"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/conv_clear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="  Clear  "
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+            </FrameLayout>
+        </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+    </TabHost>
+
+</RelativeLayout>

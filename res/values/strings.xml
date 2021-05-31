@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Audio Toolkit</string>
+    <string name="freeApp">false</string>
+    <string name="adsOn">false</string>
+    <!--
+    
+    
+    Don't forget to re-add the permissions for the free app
+    
+    
+    -->
+    <string name="freeAppMessage">To modify this and give full functionality you must upgrade to the pro version.\n\nClick the button on the front screen to get the pro version.</string>
+    <string name="aboutTagline">Audio Toolkit\n\nA suite of useful tools when setting up a stereo system. Includes calculators for subwoofer wiring, wire gauge, Ohm\'s law and more.\n\nCopyright \u00A9 2011, Werld 3 Labs</string>
+    <string name="testDeviceNum">0ED779B2F6CB7E8B97769BA7B9886611</string>
+    <string name="updates">
+    11 March 2013\n\n
+    Added:\n
+    - Database of stock speaker sizes for 19000+ vehicles\n
+    - Auto-rotation for orientation enabled, and better fitting for large display devices\n
+    - Fully redesigned tone generator, adding in stereo sound, phase, level and an easier interface\n
+    - Data boxes have built-in error indicators for invalid inputs, and a button for conversions\n
+    - Subwoofers and enclosures store to a database\n
+    - Enclosure builder algorithm re-written and interface updated, added flaring to ports and a calculator for proper area\n
+    - Removed external storage writing permissions\n
+    
+    \nFixed:\n
+    - Commas are now accepted as decimal points, for those locales that use them\n
+    - Audio playback and recording fixed for some devices that do not follow generic Android specifications.\n
+    - Subwoofer wiring diagrams fixed
+    <!-- 
+    4 May 2012\n\n
+    Added:\n
+    - Wiring gauge finder no longer restricted by length or load, added in option for multiple runs of wire\n
+    - Built in unit conversions\n
+    - Wiring diagrams for speakers expanded\n
+    - Enclosure response graphs can be saved to file\n
+    - Cleaned up UI to the Android 4.0 style\n\n
+    Fixed:\n
+    - Tone generator won\'t crash after playing ~50+ tones\n
+    - Wedge enclosure deviates less from target volume if using a very thin top\n\n
+    26 March 2012\n\n
+    Added:\n
+    - Bands added to tone generator\n\n
+    Fixed:\n
+    - Linear Sweep fixed for descending sweep\n
+    - Sound tools no longer fail to load on some Froyo devices\n\n
+    20 March 2012\n\n
+    Added:\n
+    - Wedge, cylinder enclosures now possible in the enclosure builder\n
+    - Recent changes will show in the first run after updates, also accessible in the options menu on the main screen\n\n
+    Fixed:\n
+    - Dividers between tabs and overall theme more consistent on different devices\n
+    - Clear button for enclosure response fixed\n -->
+	</string>
+	
+    
+    <string name="enc_type_prompt">Enclosure type</string>
+    <string-array name="enc_type_array">
+        <item>Rectangular</item>
+        <item>Wedge</item>
+        <item>Cylinder</item>
+    </string-array>
+    
+</resources>

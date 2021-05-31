@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_weight="1"
+		android:paddingTop="5dp"
+		android:paddingBottom="5dp"
+		android:paddingRight="5dp"
+		android:paddingLeft="5dp">
+
+		<Button
+			android:id="@+id/subbuilder_db_subsel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:textStyle="normal"
+			android:text="Choose/Add Subwoofer" />
+
+		<Button
+			android:id="@+id/subbuilder_db_subedit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textStyle="normal"
+			android:text="  Edit  " />
+
+		<Button
+			android:id="@+id/subbuilder_db_subdel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textStyle="normal"
+			android:text="Delete" />
+
+	</LinearLayout>
+</merge>

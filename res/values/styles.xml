@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="theButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_custom</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:textColor">@drawable/btn_custom_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="theTextView" parent="@android:style/Widget.TextView">
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:textColor">#aaaaaa</item>
+    </style>
+
+    <style name="theRadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/rb_drawable</item>
+        <item name="android:textColor">#aaaaaa</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="theTabWidget" parent="@android:style/Widget.TabWidget">
+        <item name="android:textAppearance">@style/theTabText</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="theTabText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@drawable/tab_text</item>
+    </style>
+
+    <style name="theDialogBox" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_frame_dark</item>
+        <!-- item name="android:windowSoftInputMode">adjustNothing</item -->
+    </style>
+
+    <style name="theScrollView" parent="@android:style/Widget.ScrollView">
+        <item name="android:scrollbarFadeDuration">99999</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+
+    <style name="theEditText" parent="@android:style/Widget.EditText">
+        <item name="android:textSelectHandle">@drawable/textfield_cursor</item>
+        <item name="android:textSelectHandleLeft">@drawable/textfield_cursor_left</item>
+        <item name="android:textSelectHandleRight">@drawable/textfield_cursor_right</item>
+        <item name="android:background">@drawable/edittext_drawable</item>
+        <item name="android:textColor">#FFAAAAAA</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">3dp</item>
+    </style>
+
+    <style name="theToggleButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_toggle</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textColor">@drawable/btn_toggle_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+</resources>

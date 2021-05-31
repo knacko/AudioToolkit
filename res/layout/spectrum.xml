@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/widget214"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#77ff0000"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3.5"
+        android:text=" Spectrum Analyzer"
+        android:textColor="#ffffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+
+            
+                        <com.AudioToolkit.CustomViews.Sliderbox
+							android:id="@+id/noisedur2"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							app:slider_attr="Duration"
+							app:slider_units="s"
+							app:slider_databoxunits="seconds"
+							app:slider_changebounds="true"
+							app:slider_max="100"
+							app:slider_min="1"
+							app:slider_scale="10"
+							/>
+            
+            <Button
+                android:id="@+id/spectrum_start"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="ON"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spectrum_graph"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+                android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

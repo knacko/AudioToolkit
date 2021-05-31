@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:id="@+id/widget31"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/adspace"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/adspace" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               android:background="@drawable/tab_background"
+                android:orientation="vertical" >
+
+                <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    app:bll_width="@integer/tabsMaxWidth" >
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:tabStripEnabled="false" />
+                </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <ScrollView
+                    android:id="@+id/equation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <!--
+                    WebView
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/tex"
+                            android:layout_width="fill_parent"
+					android:background="@drawable/edittext_background"
+					android:textColor="#FFFFFFFF"
+                            android:layout_height="100dp" /
+                        -->
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Components in Circuits: "
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/powerconv_circuit_series"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="Series" />
+
+                            <Button
+                                android:id="@+id/powerconv_circuit_parallel"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="Parallel" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Area &amp; Volume of Shapes: "
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/powerconv_shape_area"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="Area" />
+
+                            <Button
+                                android:id="@+id/powerconv_shape_volume"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="Volume" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Enclosure Calculations: "
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/powerconv_enc_ebp"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="EBP" />
+
+                            <Button
+                                android:id="@+id/powerconv_enc_sealed"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Sealed" />
+
+                            <Button
+                                android:id="@+id/powerconv_enc_ported"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Ported" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Unit Conversions: "
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/powerconv_conv_length"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Length" />
+
+                            <Button
+                                android:id="@+id/powerconv_conv_area"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Area" />
+
+                            <Button
+                                android:id="@+id/powerconv_conv_volume"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Volume" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/powerconv_conv_speed"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Speed" />
+
+                            <Button
+                                android:id="@+id/powerconv_conv_mass"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Mass" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Power:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/powerconv_ohms"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ohm&apos;s Law" />
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Sound:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/powerconv_waves"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="Waves + Wavelength" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/conversion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:id="@+id/widget60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Enter 2 of the following values:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/volts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Voltage"
+                            app:units="volts" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/watts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Wattage"
+                            app:units="watts" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/amps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Amperage"
+                            app:units="amps" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/ohms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:allownegative="true"
+                            app:attr="Resistance"
+                            app:units="ohms" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp" >
+
+                            <Button
+                                android:id="@+id/calculate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Calculate"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/clear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="  Clear  "
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

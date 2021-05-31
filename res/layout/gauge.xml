@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_background_tiled"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.AudioToolkit.CustomViews.BoundedLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:bll_width="@integer/tabsMaxWidth" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/titlebar"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Wiring Gauge"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Audio Toolkit"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tabStripEnabled="false" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_midground_tiled" >
+
+                <ScrollView
+                    android:id="@+id/wiregauge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:id="@+id/widget32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Circuit Specs:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/voltage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Voltage"
+                            app:units="volts" />
+
+                        <TextView
+                            android:id="@+id/widget32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter 3 of the following:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/runs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Wires"
+                            app:units="(# of runs)" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/gauge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Wire Gauge"
+                            app:max="24"
+                            app:min="0"
+                            app:units="(0-24) AWG" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/length"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Total Length"
+                            app:unitconv="1,0.3048"
+                            app:units="feet,meters" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/amps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Wiring Load"
+                            app:units="amps" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp" >
+
+                            <Button
+                                android:id="@+id/calculate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Calculate"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/clear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="  Clear  "
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/wirespecs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <TableLayout
+                        android:id="@+id/wiretable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:stretchColumns="0,1" />
+                </ScrollView>
+            </FrameLayout>
+        </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+    </TabHost>
+
+</RelativeLayout>

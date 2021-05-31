@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_background_tiled"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.AudioToolkit.CustomViews.BoundedLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:bll_width="@integer/tabsMaxWidth" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/titlebar"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Suggestions"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Audio Toolkit"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tabStripEnabled="false" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_midground_tiled" >
+
+
+				<ScrollView
+					android:id="@+id/sugg_sugg"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical" 
+						android:padding="10dp"
+                    app:bll_width="@integer/contentMaxWidth" >
+
+						<TextView
+							android:id="@+id/textView1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="10dp"
+							android:text="Should something be added or improved? Send a message and it may be included in a future release." />
+
+						<EditText
+							android:id="@+id/sugg_subject"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:hint="Suggestion" />
+
+						<EditText
+							android:id="@+id/sugg_body"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="top"
+							android:hint="Details"
+							android:inputType="textMultiLine"
+							android:lines="5" />
+
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal">
+
+							<Button
+								android:id="@+id/sugg_send"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="   Send   " />
+
+							<Button
+								android:id="@+id/sugg_clear"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="   Clear   " />
+						</LinearLayout>
+
+						<TextView
+							android:id="@+id/textView2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="(You&apos;ll be redirected to your e-mail client)"
+							android:textSize="10sp" />
+					</com.AudioToolkit.CustomViews.BoundedLinearLayout>
+				</ScrollView>
+
+				<ScrollView
+					android:id="@+id/sugg_poll"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical" />
+			</FrameLayout>
+		</com.AudioToolkit.CustomViews.BoundedLinearLayout>
+	</TabHost>
+</RelativeLayout>

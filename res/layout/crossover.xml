@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_background_tiled"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.AudioToolkit.CustomViews.BoundedLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:bll_width="@integer/tabsMaxWidth" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/titlebar"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Crossover Calculator"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Audio Toolkit"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tabStripEnabled="false" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_midground_tiled" >
+
+                <ScrollView
+                    android:id="@+id/nbpass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:id="@+id/widget983"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Crossover Specs:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/freq1nbpass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Low Freq."
+                            app:units="hertz" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/freq2nbpass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="High Freq."
+                            app:units="hertz" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/loadnbpass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Impedance"
+                            app:units="ohms" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="-5dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp" >
+
+                            <RadioGroup
+                                android:id="@+id/ddsa3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Slope:"
+                                    android:textSize="18sp" />
+
+                                <RadioButton
+                                    android:id="@+id/xover_bpass_6db"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="6dB "
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/xover_bpass_12db"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12dB "
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/xover_bpass_18db"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="18dB "
+                                    android:textSize="16sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <Button
+                                android:id="@+id/xover_bpass_calc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Bandpass"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/xover_nbpass_calc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/xover_bpass_calc"
+                                android:text="Narrow Bandpass"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/clearnbpass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="Clear"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/highlow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:id="@+id/widget983"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Crossover Specs:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/freqhighlow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Frequency"
+                            app:units="hertz" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/loadhighlow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Impedance"
+                            app:units="ohms" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="-5dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="5dp" >
+
+                            <RadioGroup
+                                android:id="@+id/ddsa3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Slope:"
+                                    android:textSize="18sp" />
+
+                                <RadioButton
+                                    android:id="@+id/xover_hlpass_6db"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="6dB "
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/xover_hlpass_12db"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12dB "
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/xover_hlpass_18db"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="18dB"
+                                    android:textSize="16sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <Button
+                                android:id="@+id/xover_hpass_calc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="High Pass"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/xover_lpass_calc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/xover_hpass_calc"
+                                android:text="Low Pass"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/clearhighlow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="Clear"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/zobel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:id="@+id/widget983"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Circuit Specs:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/freqzobel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Frequency"
+                            app:subtext="(impedance doubles)"
+                            app:units="hertz" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/loadzobel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Impedance"
+                            app:units="ohms" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" 
+                            android:paddingTop="5dp">
+
+                            <Button
+                                android:id="@+id/calczobel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Calculate"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/clearzobel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="  Clear  "
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+            </FrameLayout>
+        </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+    </TabHost>
+
+</RelativeLayout>

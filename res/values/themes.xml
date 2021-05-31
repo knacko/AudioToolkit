@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="theTheme" parent="@android:Theme">
+        <item name="android:tabWidgetStyle">@style/theTabWidget</item>
+        <item name="android:buttonStyle">@style/theButton</item>
+        <item name="android:tabStripEnabled">false</item>
+        <item name="android:radioButtonStyle">@style/theRadioButton</item>
+        <item name="android:scrollViewStyle">@style/theScrollView</item>
+        <item name="android:textViewStyle">@style/theTextView</item>
+        <item name="android:editTextStyle">@style/theEditText</item>
+        <item name="android:buttonStyleToggle">@style/theToggleButton</item>
+    </style>
+
+</resources>

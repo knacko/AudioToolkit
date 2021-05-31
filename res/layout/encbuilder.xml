@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_background_tiled"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.AudioToolkit.CustomViews.BoundedLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:bll_width="@integer/tabsMaxWidth" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/titlebar"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Enclosure Builder"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Audio Toolkit"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tabStripEnabled="false" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_midground_tiled" >
+
+
+                <ScrollView
+                    android:id="@+id/encbuilder_response"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subwoofer:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.SubSelector
+                            android:id="@+id/resp_subsel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+                        <com.AudioToolkit.CustomViews.Databox
+                            android:id="@+id/resp_numsubs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:attr="Subwoofers"
+                            app:units="(# of)" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enclosure:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.EncSelector
+                            android:id="@+id/resp_encsel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <Button
+                                android:id="@+id/resp_calculate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:text="Calculate"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/resp_clear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="  Clear  "
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/encbuilder_portspecs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enclosure:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.EncSelector
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/encbuilder_database"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.AudioToolkit.CustomViews.BoundedLinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        app:bll_width="@integer/contentMaxWidth" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Subwoofer:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.SubSelector
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            app:subsel_full="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5px"
+                            android:layout_marginTop="5px"
+                            android:text="Enclosure:"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.AudioToolkit.CustomViews.EncSelector
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            app:encsel_full="true" />
+                    </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+                </ScrollView>
+            </FrameLayout>
+        </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+    </TabHost>
+
+</RelativeLayout>

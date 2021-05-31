@@ -1,0 +1,1666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/background"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:id="@+id/adspace"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	android:orientation="vertical"		
+		android:layout_alignParentBottom="true" />
+
+	<TabHost
+		android:id="@android:id/tabhost"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_marginTop="-10dp"
+		android:layout_above="@+id/adspace">
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+
+			<TabWidget
+				android:id="@android:id/tabs"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:tabStripEnabled="false" />
+
+			<FrameLayout
+				android:id="@android:id/tabcontent"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+
+			    <ScrollView
+					android:id="@+id/enc_wedge"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent">
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:orientation="vertical">
+
+						<TextView
+							android:id="@+id/widget32"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:layout_marginTop="5dp"
+							android:text="Wedge Enclosure:"
+							android:textSize="16sp"
+							android:textStyle="bold" />
+
+						<TableRow
+							android:id="@+id/widget49"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:visibility="gone"
+							android:orientation="horizontal">
+
+							<TextView
+								android:id="@+id/widget50"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:text="Units "
+								android:textSize="16sp" />
+
+							<RadioGroup
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<RadioButton
+									android:id="@+id/w_unitIN"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:checked="true"
+									android:orientation="horizontal"
+									android:text="in  " />
+
+								<RadioButton
+									android:id="@+id/w_unitCM"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:text="centimeters" />
+							</RadioGroup>
+						</TableRow>
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/w_thickness"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Wall Thickness"
+							
+							app:unitconv="1,25.4"
+							app:units="inches,millimeters" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/w_volume"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Volume"
+							
+							app:units="cu.inches,cu.feet,litres"
+							app:unitconv="1,0.000578703,0.016387064" />
+
+						<TableRow
+							android:id="@+id/widget49"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:orientation="horizontal">
+
+							<TextView
+								android:id="@+id/widget50"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:text="Type: "
+								android:textSize="16sp" />
+
+							<RadioGroup
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<RadioButton
+									android:id="@+id/w_sealedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:checked="true"
+									android:orientation="horizontal"
+									android:text="Sealed  " />
+
+								<RadioButton
+									android:id="@+id/w_portedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:text="Ported  " />
+							</RadioGroup>
+						</TableRow>
+
+						<TableLayout
+							android:id="@+id/w_portspecsTL"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/w_portfreq"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Port Freq."
+									app:units="hertz" />
+							</TableRow>
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/w_portarea"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Port Area"
+									
+									app:unitconv="1,6.4516"
+									app:units="sq.inches,sq.centimeters" />
+							</TableRow>
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/w_numports"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Num. of Ports"
+									app:units="" />
+							</TableRow>
+						</TableLayout>
+
+						<TableRow
+							android:id="@+id/widget435"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="-5dp"
+							android:orientation="horizontal"
+							android:padding="5dp">
+
+							<Button
+								android:id="@+id/w_calculate"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Calculate"
+								android:textStyle="bold" />
+
+							<Button
+								android:id="@+id/w_clear"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Clear"
+								android:textStyle="bold" />
+
+							<View
+								android:layout_width="wrap_content"
+								android:layout_height="1dp"
+								android:layout_weight="1" />
+
+							<Button
+								android:id="@+id/w_diagram"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="5dp"
+								android:singleLine="true"
+								android:text="Diagram"
+								android:textStyle="bold" />
+						</TableRow>
+
+						<LinearLayout
+							android:id="@+id/w_results"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:gravity="center"
+							android:orientation="vertical">
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:layout_marginTop="10dp"
+								android:orientation="horizontal">
+
+								<TextView
+									android:id="@+id/widget50"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center_vertical"
+									android:text="Step: "
+									android:textSize="16sp" />
+
+								<RadioGroup
+									android:id="@+id/widget49"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<RadioButton
+										android:id="@+id/w_step01"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:checked="true"
+										android:orientation="horizontal"
+										android:text="0.1" />
+
+									<RadioButton
+										android:id="@+id/w_step1"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="horizontal"
+										android:text="1  " />
+
+									<RadioButton
+										android:id="@+id/w_step5"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="horizontal"
+										android:text="5  " />
+								</RadioGroup>
+							</TableRow>
+
+							<TableLayout
+								android:id="@+id/widget83"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_marginLeft="5dp"
+								android:layout_marginRight="5dp"
+								android:layout_marginTop="-15dp"
+								android:orientation="vertical">
+
+							    
+							    <com.AudioToolkit.CustomViews.Arrowbox
+									android:id="@+id/widget498"							        
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									app:arrow_attr="Farts" />
+							    
+							    <com.AudioToolkit.CustomViews.Arrowbox
+									android:id="@+id/widget498"							        
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									app:arrow_attr="Farts" />
+							    
+							    <com.AudioToolkit.CustomViews.Arrowbox
+									android:id="@+id/widget498"							        
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									app:arrow_attr="Farts3" />
+							    </TableLayout>
+							   
+							<TableLayout
+								android:id="@+id/widget83"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_marginLeft="5dp"
+								android:layout_marginRight="5dp"
+								android:layout_marginTop="-15dp"
+								android:orientation="vertical">
+							
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Lock"
+										android:textSize="16sp" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="fill_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Top:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/w_tminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/w_topET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/w_tplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/w_lengthtopCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="fill_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Bottom:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/w_bminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/w_bottomET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/w_bplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/w_lengthCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Width:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/w_wminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/w_widthET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/w_wplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/w_widthCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Height:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/w_hminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/w_heightET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/w_hplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/w_heightCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="" />
+								</TableRow>
+								
+												<TableRow
+									android:id="@+id/w_portlengthTR"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/w_portlength"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										app:attr="Port Length"
+										app:edittable="false"
+										android:layout_span="5"
+										
+										
+										app:unitconv="1,2.54,25.4"
+										app:units="inches,centimeters,millimeters" />
+								</TableRow>
+							</TableLayout>
+
+						</LinearLayout>
+					</LinearLayout>
+				</ScrollView>
+			    
+			    
+				<ScrollView
+					android:id="@+id/enc_cylinder"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent">
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:orientation="vertical">
+
+						<TextView
+							android:id="@+id/widget32"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:layout_marginTop="5dp"
+							android:text="Cylindrical Enclosure:"
+							android:textSize="16sp"
+							android:textStyle="bold" />
+
+						<TableRow
+							android:id="@+id/widget49"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:orientation="horizontal"
+							android:visibility="gone">
+
+							<TextView
+								android:id="@+id/widget50"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:text="Units "
+								android:textSize="16sp" />
+
+							<RadioGroup
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<RadioButton
+									android:id="@+id/enc_cylinder_unitIN"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:checked="true"
+									android:orientation="horizontal"
+									android:text="in  " />
+
+								<RadioButton
+									android:id="@+id/enc_cylinder_unitCM"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:text="centimeters" />
+
+							</RadioGroup>
+						</TableRow>
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_cylinder_thickness"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Wall Thickness"
+							app:units="inches,millimeters"
+							
+							app:unitconv="1,25.4" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_cylinder_volume"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Volume"
+							
+							app:units="cu.inches,cu.feet,litres"
+							app:unitconv="1,0.000578703,0.016387064" />
+
+						<TableRow
+							android:id="@+id/widget49"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:orientation="horizontal">
+
+							<TextView
+								android:id="@+id/widget50"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:text="Type: "
+								android:textSize="16sp" />
+
+							<RadioGroup
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<RadioButton
+									android:id="@+id/enc_cylinder_sealedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:checked="true"
+									android:orientation="horizontal"
+									android:text="Sealed  " />
+
+								<RadioButton
+									android:id="@+id/enc_cylinder_portedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:text="Ported  " />
+							</RadioGroup>
+						</TableRow>
+
+						<TableLayout
+							android:id="@+id/enc_cylinder_portspecsTL"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/enc_cylinder_portfreq"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Port Freq."
+									app:units="hertz" />
+							</TableRow>
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/enc_cylinder_portarea"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Port Area"
+									
+									app:units="sq.inches,sq.centimeters"
+									app:unitconv="1,6.4516" />
+							</TableRow>
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/enc_cylinder_numports"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Num. of Ports"
+									app:units="" />
+							</TableRow>
+						</TableLayout>
+
+						<TableRow
+							android:id="@+id/widget435"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="-5dp"
+							android:orientation="horizontal"
+							android:padding="5dp">
+
+							<Button
+								android:id="@+id/enc_cylinder_calculate"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Calculate"
+								android:textStyle="bold" />
+
+							<Button
+								android:id="@+id/enc_cylinder_clear"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Clear"
+								android:textStyle="bold" />
+
+							<View
+								android:layout_width="wrap_content"
+								android:layout_height="1dp"
+								android:layout_weight="1" />
+
+							<Button
+								android:id="@+id/enc_cylinder_diagram"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="5dp"
+								android:singleLine="true"
+								android:text="Diagram"
+								android:textStyle="bold" />
+						</TableRow>
+
+						<LinearLayout
+							
+							android:id="@+id/enc_cylinder_results"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+								android:gravity="center"
+							android:orientation="vertical">
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:layout_marginTop="10dp"
+								android:orientation="horizontal">
+
+								<TextView
+									android:id="@+id/widget50"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center_vertical"
+									android:text="Step: "
+									android:textSize="16sp" />
+
+								<RadioGroup
+									android:id="@+id/widget49"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<RadioButton
+										android:id="@+id/enc_cylinder_step01"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:checked="true"
+										android:orientation="horizontal"
+										android:text="0.1" />
+
+									<RadioButton
+										android:id="@+id/enc_cylinder_step1"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="horizontal"
+										android:text="1  " />
+
+									<RadioButton
+										android:id="@+id/enc_cylinder_step5"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="horizontal"
+										android:text="5  " />
+								</RadioGroup>
+							</TableRow>
+
+							<TableLayout
+								android:id="@+id/widget83"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_marginLeft="5dp"
+								android:layout_marginRight="5dp"
+								android:layout_marginTop="-15dp"
+								android:orientation="vertical">
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Lock"
+										android:textSize="16sp"
+										android:visibility="gone" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="fill_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Length:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/enc_cylinder_lminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/enc_cylinder_lengthET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/enc_cylinder_lplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/enc_cylinder_lengthCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text=""
+										android:visibility="gone" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="fill_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Radius:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/enc_cylinder_rminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/enc_cylinder_radiusET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/enc_cylinder_rplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/enc_cylinder_radiusCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text=""
+										android:visibility="gone" />
+								</TableRow>
+								
+																<TableRow
+									android:id="@+id/enc_cylinder_portlengthTR"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/enc_cylinder_portlength"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_span="5"
+										app:attr="Port Length"
+										app:edittable="false"
+										
+										app:unitconv="1,2.54,25.4"
+										app:units="inches,centimeters,millimeters" />
+								</TableRow>
+							</TableLayout>
+
+						</LinearLayout>
+					</LinearLayout>
+				</ScrollView>
+			    
+			    
+				<ScrollView
+					android:id="@+id/enc_rect"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent">
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:orientation="vertical">
+
+						<TextView
+							android:id="@+id/widget32"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:layout_marginTop="5dp"
+							android:text="Rectangular Enclosure:"
+							android:textSize="16sp"
+							android:textStyle="bold" />
+
+						<TableRow
+							android:id="@+id/widget49"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:visibility="gone"
+							android:orientation="horizontal">
+
+							<TextView
+								android:id="@+id/widget50"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:text="Units "
+								android:textSize="16sp" />
+
+							<RadioGroup
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<RadioButton
+									android:id="@+id/unitIN"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:checked="true"
+									android:orientation="horizontal"
+									android:text="in  " />
+
+								<RadioButton
+									android:id="@+id/unitCM"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:text="centimeters" />
+							</RadioGroup>
+						</TableRow>
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/thickness"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Wall Thickness"
+							
+							app:unitconv="1,25.4"
+							app:units="inches,millimeters" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/volume"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Volume"
+							
+							app:units="cu.inches,cu.feet,litres"
+							app:unitconv="1,0.000578703,0.016387064" />
+
+						<TableRow
+							android:id="@+id/widget49"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:orientation="horizontal">
+
+							<TextView
+								android:id="@+id/widget50"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:text="Type: "
+								android:textSize="16sp" />
+
+							<RadioGroup
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<RadioButton
+									android:id="@+id/sealedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:checked="true"
+									android:orientation="horizontal"
+									android:text="Sealed  " />
+
+								<RadioButton
+									android:id="@+id/portedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:text="Ported  " />
+							</RadioGroup>
+						</TableRow>
+
+						<TableLayout
+							android:id="@+id/portspecsTL"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/portfreq"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Port Freq."
+									app:units="hertz" />
+							</TableRow>
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/portarea"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Port Area"
+									
+									app:unitconv="1,6.4516"
+									app:units="sq.inches,sq.centimeters" />
+							</TableRow>
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<com.AudioToolkit.CustomViews.Databox
+									android:id="@+id/numports"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									app:attr="Num. of Ports"
+									app:units="" />
+							</TableRow>
+						</TableLayout>
+
+						<TableRow
+							android:id="@+id/widget435"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginBottom="-5dp"
+							android:orientation="horizontal"
+							android:padding="5dp">
+
+							<Button
+								android:id="@+id/calculate"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Calculate"
+								android:textStyle="bold" />
+
+							<Button
+								android:id="@+id/clear"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Clear"
+								android:textStyle="bold" />
+
+							<View
+								android:layout_width="wrap_content"
+								android:layout_height="1dp"
+								android:layout_weight="1" />
+
+							<Button
+								android:id="@+id/enc_rect_diagram"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginRight="5dp"
+								android:singleLine="true"
+								android:text="Diagram"
+								android:textStyle="bold" />
+						</TableRow>
+
+						<LinearLayout
+							
+							android:id="@+id/results"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:orientation="vertical"
+							android:gravity="center">
+
+							<TableRow
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="10dp"
+								android:layout_marginTop="10dp"
+								android:orientation="horizontal">
+
+								<TextView
+									android:id="@+id/widget50"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center_vertical"
+									android:text="Step: "
+									android:textSize="16sp" />
+
+								<RadioGroup
+									android:id="@+id/widget49"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<RadioButton
+										android:id="@+id/step01"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:checked="true"
+										android:orientation="horizontal"
+										android:text="0.1" />
+
+									<RadioButton
+										android:id="@+id/step1"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="horizontal"
+										android:text="1  " />
+
+									<RadioButton
+										android:id="@+id/step5"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:orientation="horizontal"
+										android:text="5  " />
+								</RadioGroup>
+							</TableRow>
+
+							<TableLayout
+								android:id="@+id/widget83"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center"
+								android:layout_marginLeft="5dp"
+								android:layout_marginRight="5dp"
+								android:layout_marginTop="-15dp"
+								android:orientation="vertical">
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content" />
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="Lock"
+										android:textSize="16sp" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="fill_parent"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Length:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/lminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/lengthET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/lplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/lengthCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Width:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/wminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/widthET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/wplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/widthCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/widget49"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:layout_gravity="center"
+									android:orientation="horizontal">
+
+									<TextView
+										android:id="@+id/widget50"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="Height:"
+										android:textSize="16sp" />
+
+									<Button
+										android:id="@+id/hminus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &lt;   "
+										android:textStyle="bold" />
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/heightET"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:cursorVisible="false"
+										app:edittable="false"
+										app:units="inches,cm"
+										app:unitconv="1,2.54"
+										app:boxonly="true" />
+
+									<Button
+										android:id="@+id/hplus"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:text="   &gt;   "
+										android:textStyle="bold" />
+
+									<CheckBox
+										android:id="@+id/heightCB"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										android:layout_gravity="center"
+										android:text="" />
+								</TableRow>
+
+								<TableRow
+									android:id="@+id/portlengthTR"
+									android:layout_width="fill_parent"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal">
+
+									<com.AudioToolkit.CustomViews.Databox
+										android:id="@+id/portlength"
+										android:layout_width="wrap_content"
+										android:layout_height="wrap_content"
+										app:attr="Port Length"
+										app:edittable="false"
+										android:layout_span="5"
+										
+										
+										app:unitconv="1,2.54,25.4"
+										app:units="inches,centimeters,millimeters" />
+								</TableRow>
+							</TableLayout>
+						</LinearLayout>
+					</LinearLayout>
+				</ScrollView>
+
+				<ScrollView
+					android:id="@+id/response"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent">
+
+					<LinearLayout
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:orientation="vertical">
+
+						<TextView
+							android:id="@+id/widget32"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:layout_marginTop="5dp"
+							android:text="Enclosure:"
+							android:textSize="16sp"
+							android:textStyle="bold" />
+
+						<TableRow
+							android:id="@+id/widget49"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="10dp"
+							android:orientation="horizontal">
+
+							<TextView
+								android:id="@+id/widget50"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_gravity="center_vertical"
+								android:text="Type: "
+								android:textSize="16sp" />
+
+							<RadioGroup
+								android:id="@+id/widget49"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal">
+
+								<RadioButton
+									android:id="@+id/enc_resp_sealedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:checked="true"
+									android:orientation="horizontal"
+									android:text="Sealed  " />
+
+								<RadioButton
+									android:id="@+id/enc_resp_portedRB"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:orientation="horizontal"
+									android:text="Ported  " />
+							</RadioGroup>
+						</TableRow>
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_vb"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Volume"
+							app:subtext="(Vb) (Click to change units)"
+							app:unitconv="1,61.0237441,0.0353146667"
+							app:units="litres,cu.inches,cu.feet" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_fb"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Port Frequency"
+							app:subtext="(Fb)"
+							app:units="hertz" />
+
+						<TextView
+							android:id="@+id/widget32"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:layout_marginTop="15dp"
+							android:text="Subwoofer:"
+							android:textSize="16sp"
+							android:textStyle="bold" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_qts"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Driver Q, total"
+							app:subtext="(Qts)"
+							app:units="" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_qes"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Driver Q, elec."
+							app:subtext="(Qes)"
+							app:units="" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_vas"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Volume"
+							app:unitconv="1,61.0237441,0.0353146667"
+							app:subtext="(Vas) (Click to change units)"
+							app:units="litres,cu.inches,cu.feet" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_fs"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Driver resonance"
+							app:subtext="(Fs)"
+							app:units="hertz" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_pemax"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Power"
+							app:subtext="(PEmax)"
+							app:units="watts" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_sd"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Surface Area"
+							app:unitconv="1,0.155"
+							app:subtext="(Sd) (Click to change units)"
+							app:units="sq.centimeters,sq.inches" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_xmax"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Excursion"
+
+							app:unitconv="1,0.1,0.03937"
+							app:subtext="(Xmax) (Click to change units)"
+							app:units="millimeters,centimeters,inches" />
+
+						<com.AudioToolkit.CustomViews.Databox
+							android:id="@+id/enc_numsubs"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							app:attr="Subwoofers"
+							app:units="(# of)" />
+
+						<TableRow
+							android:id="@+id/widget435"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal"
+							android:padding="10dp">
+
+							<Button
+								android:id="@+id/enc_graphcalc"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Calculate"
+								android:textStyle="bold" />
+
+							<Button
+								android:id="@+id/enc_graphclear"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="Clear"
+								android:textStyle="bold" />
+						</TableRow>
+					</LinearLayout>
+				</ScrollView>
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+			</FrameLayout>
+		</LinearLayout>
+	</TabHost>
+</RelativeLayout>

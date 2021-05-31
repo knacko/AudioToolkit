@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_background_tiled"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.AudioToolkit.CustomViews.BoundedLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:bll_width="@integer/tabsMaxWidth" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/titlebar"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Tone Generator"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Audio Toolkit"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tabStripEnabled="false" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_midground_tiled" >
+
+                <RelativeLayout
+                    android:id="@+id/bands"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_above="@+id/bandButtons"
+                        android:isScrollContainer="false" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/bandhz1slider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:slider_attr="Start Freq."
+                                app:slider_databoxunits="(20-20k) hertz"
+                                app:slider_max="20000"
+                                app:slider_min="20"
+                                app:slider_units="Hz" />
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/bandhz2slider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                app:slider_attr="End Freq."
+                                app:slider_databoxunits="(20-20k) hertz"
+                                app:slider_max="20000"
+                                app:slider_min="20"
+                                app:slider_units="Hz" />
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/bandbandslider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                app:slider_attr="Bands"
+                                app:slider_changebounds="true"
+                                app:slider_databoxunits="# of bands"
+                                app:slider_max="10"
+                                app:slider_min="1"
+                                app:slider_units="" />
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/banddurslider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                app:slider_attr="Length"
+                                app:slider_changebounds="true"
+                                app:slider_databoxunits="seconds"
+                                app:slider_decimals="1"
+                                app:slider_initialvalue="1"
+                                app:slider_max="10"
+                                app:slider_min="0"
+                                app:slider_units="s" />
+
+                            <RadioGroup
+                                android:id="@+id/radios"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-15dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/band_looping"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="Looping  "
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/band_reversing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="Reversing"
+                                    android:textSize="16sp" />
+                            </RadioGroup>
+
+                            <LinearLayout
+                                android:id="@+id/bandadvoptions"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/bandButtons"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/tab_background"
+                        android:orientation="horizontal" >
+
+                        <ToggleButton
+                            android:id="@+id/genadd"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_add"
+                            android:textOff="Additive"
+                            android:textOn="Additive" />
+
+                        <ToggleButton
+                            android:id="@+id/genmult"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_mult"
+                            android:textOff="Multiplicative"
+                            android:textOn="Multiplicative" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/wave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_above="@+id/waveButtons"
+                        android:isScrollContainer="false" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/wavefreqslider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:slider_attr="Frequency"
+                                app:slider_databoxunits="(20-20k) hertz"
+                                app:slider_max="20000"
+                                app:slider_min="20"
+                                app:slider_units="Hz" />
+
+                            <LinearLayout
+                                android:id="@+id/waveadvoptions"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" >
+
+                                <LinearLayout
+                                    android:id="@+id/advoptions"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@drawable/background_dark"
+                                    android:orientation="vertical" >
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="-15dp"
+                                        android:layout_marginRight="-15dp"
+                                        android:orientation="vertical" >
+
+                                        <LinearLayout
+                                            android:id="@+id/advBTN"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:clickable="true"
+                                            android:gravity="left"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="10dp" >
+
+                                            <ImageView
+                                                android:id="@+id/advIMG"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/btn_radio_off" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:paddingLeft="5dp"
+                                                android:text="Advanced Options"
+                                                android:textSize="16sp" />
+                                        </LinearLayout>
+
+                                        <com.AudioToolkit.CustomViews.Sliderbox
+                                            android:id="@+id/balslider"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            app:slider_allownegative="true"
+                                            app:slider_attr="Balance"
+                                            app:slider_databoxunits="-1 (Left) to 1 (Right)"
+                                            app:slider_decimals="2"
+                                            app:slider_hidenegativesign="true"
+                                            app:slider_initialvalue="0"
+                                            app:slider_max="1"
+                                            app:slider_min="-1"
+                                            app:slider_units="" />
+
+                                        <com.AudioToolkit.CustomViews.Sliderbox
+                                            android:id="@+id/leftphaseslider"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            app:slider_allownegative="true"
+                                            app:slider_attr="Phase (L)"
+                                            app:slider_databoxunits="-360 to 360\u00B0"
+                                            app:slider_initialvalue="0"
+                                            app:slider_max="360"
+                                            app:slider_min="-360"
+                                            app:slider_units="-\u00B0" />
+
+                                        <com.AudioToolkit.CustomViews.Sliderbox
+                                            android:id="@+id/rightphaseslider"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            app:slider_allownegative="true"
+                                            app:slider_attr="Phase (R)"
+                                            app:slider_databoxunits="-360 to 360\u00B0"
+                                            app:slider_initialvalue="0"
+                                            app:slider_max="360"
+                                            app:slider_min="-360"
+                                            app:slider_units="-\u00B0" />
+
+                                        <com.AudioToolkit.CustomViews.Sliderbox
+                                            android:id="@+id/amplitudeslider"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            app:slider_allownegative="true"
+                                            app:slider_attr="Level"
+                                            app:slider_databoxunits="-20dB to 20dB"
+                                            app:slider_decimals="1"
+                                            app:slider_initialvalue="0"
+                                            app:slider_max="20"
+                                            app:slider_min="-20"
+                                            app:slider_units="dB" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/waveButtons"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/tab_background"
+                        android:orientation="horizontal" >
+
+                        <ToggleButton
+                            android:id="@+id/gensin"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_sine"
+                            android:textOff="Sine"
+                            android:textOn="Sine" />
+
+                        <ToggleButton
+                            android:id="@+id/gensquare"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_square"
+                            android:textOff="Square"
+                            android:textOn="Square" />
+
+                        <ToggleButton
+                            android:id="@+id/gentri"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_triangle"
+                            android:textOff="Triangle"
+                            android:textOn="Triangle" />
+
+                        <ToggleButton
+                            android:id="@+id/gensaw"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_sawtooth"
+                            android:textOff="Sawtooth"
+                            android:textOn="Sawtooth" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sweep"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_above="@+id/sweepButtons"
+                        android:isScrollContainer="false" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/sweephz1slider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:slider_attr="Start Freq."
+                                app:slider_databoxunits="(20-20k) hertz"
+                                app:slider_max="20000"
+                                app:slider_min="20"
+                                app:slider_units="Hz" />
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/sweephz2slider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                app:slider_attr="End Freq."
+                                app:slider_databoxunits="(20-20k) hertz"
+                                app:slider_max="20000"
+                                app:slider_min="20"
+                                app:slider_units="Hz" />
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/sweepdurslider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                app:slider_attr="Length"
+                                app:slider_changebounds="true"
+                                app:slider_databoxunits="seconds"
+                                app:slider_decimals="1"
+                                app:slider_initialvalue="1"
+                                app:slider_max="10"
+                                app:slider_min="0"
+                                app:slider_units="s" />
+
+                            <RadioGroup
+                                android:id="@+id/radios"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-15dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/tone_looping"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="Looping  "
+                                    android:textSize="16sp" />
+
+                                <RadioButton
+                                    android:id="@+id/tone_reversing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="Reversing"
+                                    android:textSize="16sp" />
+                            </RadioGroup>
+
+                            <LinearLayout
+                                android:id="@+id/sweepadvoptions"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/sweepButtons"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/tab_background"
+                        android:orientation="horizontal" >
+
+                        <ToggleButton
+                            android:id="@+id/genlinear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_linear"
+                            android:textOff="Linear"
+                            android:textOn="Linear" />
+
+                        <ToggleButton
+                            android:id="@+id/gencubic"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_cubic"
+                            android:textOff="Cubic"
+                            android:textOn="Cubic" />
+
+                        <ToggleButton
+                            android:id="@+id/genexp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_exponential"
+                            android:textOff="Exponential"
+                            android:textOn="Exponential" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/noise"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        android:id="@+id/w234234"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:isScrollContainer="false" >
+
+                        <LinearLayout
+                            android:id="@+id/noiseadvoptions"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical" />
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/noiseButtons"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/tab_background"
+                        android:orientation="horizontal" >
+
+                        <ToggleButton
+                            android:id="@+id/genwhite"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_white"
+                            android:textOff="White"
+                            android:textOn="White" />
+
+                        <ToggleButton
+                            android:id="@+id/genpink"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_pink"
+                            android:textOff="Pink"
+                            android:textOn="Pink" />
+
+                        <ToggleButton
+                            android:id="@+id/genblue"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_blue"
+                            android:textOff="Blue"
+                            android:textOn="Blue" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        android:id="@+id/w234234"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:isScrollContainer="false" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/stagehzslider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:slider_attr="Frequency"
+                                app:slider_databoxunits="(20-20k) hertz"
+                                app:slider_max="20000"
+                                app:slider_min="20"
+                                app:slider_units="Hz" />
+
+                            <com.AudioToolkit.CustomViews.Sliderbox
+                                android:id="@+id/stagedurslider"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                app:slider_attr="Length"
+                                app:slider_changebounds="true"
+                                app:slider_databoxunits="seconds"
+                                app:slider_decimals="1"
+                                app:slider_initialvalue="1"
+                                app:slider_max="10"
+                                app:slider_min="0"
+                                app:slider_units="s" />
+
+                            <LinearLayout
+                                android:id="@+id/stageadvoptions"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/stageButtons"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/tab_background"
+                        android:orientation="horizontal" >
+
+                        <ToggleButton
+                            android:id="@+id/gensides"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_white"
+                            android:textOff="Alternate"
+                            android:textOn="Alternate" />
+
+                        <ToggleButton
+                            android:id="@+id/genfade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_pink"
+                            android:textOff="Fade"
+                            android:textOn="Fade" />
+
+                        <ToggleButton
+                            android:id="@+id/genfade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_tone_pink"
+                            android:textOff="Circular"
+                            android:textOn="Circular" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </FrameLayout>
+        </com.AudioToolkit.CustomViews.BoundedLinearLayout>
+    </TabHost>
+
+</RelativeLayout>

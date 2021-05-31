@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+	<definition>
+		<name>Acoustic suspension</name>
+		<description>A sealed or closed box speaker enclosure.</description>
+	</definition>
+		<definition>
+		<name>Alignment</name>
+		<description>A class of enclosure parameters that provides optimum performance for a woofer with a given value of Q.</description>
+	</definition>
+	<definition>
+		<name>Alpha</name>
+		<description>Term used in sealed enclosure designs to mean the ratio of Vas to Vb, where Vb is the volume of the box you will build.</description>
+	</definition>
+	<definition>
+		<name>Alternating Current (AC)</name>
+		<description>An electrical current that periodically changes in magnitude and direction.</description>
+	</definition>
+	<definition>
+		<name>Ambience</name>
+		<description>The acoustic characteristics of a space with regard to reverberation. A room with a lot of reverb is said to be "live"; one without much reverb is "dead."</description>
+	</definition>
+	<definition>
+		<name>Ampere (A)</name>
+		<description>The unit of measurement for electrical current in coulombs per second. There is one ampere in a circuit that has one ohm resistance when one volt is applied to the circuit. See Ohms Law.</description>
+	</definition>
+	<definition>
+		<name>Amplifier (Amp)</name>
+		<description>A device which increases signal level. Many types of amplifiers are used in audio systems. Amplifiers typically increase voltage, current or both. Audio power amplifiers are classified primarily by the design of the output stage. Classification is based on the amount of time the output devices operate during each cycle of signal swing. Also defined in terms of output bias current, (the amount of current flowing in the output devices with no signal).</description>
+	</definition>
+	<definition>
+		<name>Amplifier - Class A</name>
+		<description>Operation is where both devices conduct continuously for the entire cycle of signal swing, or the bias current flows in the output devices at all times. The key ingredient of class A operation is that both devices are always on. There is no condition where one or the other is turned off. Because of this, class A amplifiers are single-ended designs with only one type polarity output devices. Class A is the most inefficient of all power amplifier designs, averaging only around 20%. Because of this, class A amplifiers are large, heavy and run very hot. All this is due to the amplifier constantly operating at full power.The positive effect of all this is that class A designs are inherently the most linear, with the least amount of distortion.</description>
+	</definition>
+	<definition>
+		<name>Amplifier - Class B</name>
+		<description>Operation is the opposite of class A. Both output devices are never allowed to be on at the same time, or the bias is set so that current flow in a specific output device is zero when not stimulated with an input signal, i.e., the current in a specific output flows for one half cycle. Thus each output device is on for exactly one half of a complete sinusoidal signal cycle. Due to this operation, class B designs show high efficiency but poor linearity around the crossover region. This is due to the time it takes to turn one device off and the other device on, which translates into extreme crossover distortion. Thus restricting class B designs to power consumption critical applications, e.g., battery operated equipment, such as 2-way radio and other communications audio.</description>
+	</definition>
+	<definition>
+		<name>Amplifier - Class AB</name>
+		<description>Operation allows both devices to be on at the same time (like in class A), but just barely. The output bias is set so that current flows in a specific output device appreciably more than a half cycle but less than the entire cycle. That is, only a small amount of current is allowed to flow through both devices, unlike the complete load current of class A designs, but enough to keep each device operating so they respond instantly to input voltage demands. Thus the inherent non-linearity of class B designs is eliminated, without the gross inefficiencies of the class A design. It is this combination of good efficiency (around 50%) with excellent linearity that makes class AB the most popular audio amplifier design.</description>
+	</definition>
+	<definition>
+		<name>Amplifier - Class AB plus B</name>
+		<description>Design involves two pairs of output devices: one pair operates class AB while the other (slave) pair operates class B.</description>
+	</definition>
+	<definition>
+		<name>Amplifier - Class D</name>
+		<description>Operation is switching, hence the term switching power amplifier. Here the output devices are rapidly switched on and off at least twice for each cycle.  Since the output devices are either completely on or completely off they do not theoretically dissipate any power.  Consequently class D operation is theoretically 100% efficient, but this requires zero on-impedance switches with infinitely fast switching times -- a product we're still waiting for; meanwhile designs do exist with true efficiencies approaching 90%.</description>
+	</definition>
+	<definition>
+		<name>Amplifier - Class G</name>
+		<description>Operation involves changing the power supply voltage from a lower level to a higher level when larger output swings are required. There have been several ways to do this. The simplest involves a single class AB output stage that is connected to two power supply rails by a diode, or a transistor switch. The design is such that for most musical program material, the output stage is connected to the lower supply voltage, and automatically switches to the higher rails for large signal peaks. Another approach uses two class AB output stages, each connected to a different power supply voltage, with the magnitude of the input signal determining the signal path. Using two power supplies improves efficiency enough to allow significantly more power for a given size and weight. Class G is becoming common for pro audio designs.
+    Class H operation takes the class G design one step further and actually modulates the higher power supply voltage by the input signal. This allows the power supply to track the audio input and provide just enough voltage for optimum operation of the output devices. The efficiency of class H is comparable to class G designs.</description>
+	</definition>
+	<definition>
+		<name>Attenuate</name>
+		<description>To reduce in level.</description>
+	</definition>
+	<definition>
+		<name>Analog</name>
+		<description>Before digital, the way all sound was reproduced.</description>
+	</definition>
+	<definition>
+		<name>Aperiodic</name>
+		<description>Refers to a type of bass-cabinet loading. An aperiodic enclosure type usually features a very restrictive, (damped), port. The purpose of this restrictive port is not to extend bass response, but lower the Q of the system and reduce the impedance peak at resonance. Most restrictive ports are heavily stuffed with fiberglass, dacron or foam.</description>
+	</definition>
+	<definition>
+		<name>Audiophile</name>
+		<description>A person interested in sound reproduction.</description>
+	</definition>
+	<definition>
+		<name>Baffle</name>
+		<description>A surface used to mount a loudspeaker.</description>
+	</definition>
+	<definition>
+		<name>Balanced</name>
+		<description>Referring to wiring: Audio signals require two wires. In an unbalanced line the shield is one of those wires. In a balanced line, there are two wires plus the shield. For the system to be balanced requires balanced electronics and usually employs XLR connectors. Balanced lines are less apt to pick up external noise. This is usually not a factor in home audio, but is a factor in professional audio requiring hundreds or even thousands of feet of cabling. Many higher quality home audio cables terminated with RCA jacks are balanced designs using two conductors and a shield instead of one conductor plus shield.</description>
+	</definition>
+	<definition>
+		<name>Bandwidth</name>
+		<description>The total frequency range of any system. Usually specified as something like: 20-20,000Hz plus or minus 3 db.</description>
+	</definition>
+	<definition>
+		<name>Band-pass Enclosure</name>
+		<description>A multi-chambered ported system.</description>
+	</definition>
+	<definition>
+		<name>Band-pass filter</name>
+		<description>An electric circuit designed to pass only middle frequencies.</description>
+	</definition>
+	<definition>
+		<name>Bass Blockers</name>
+		<description>Commercial name for auto-sound first order high pass crossovers (non-polarized capacitors), generally used on midbass or dash speakers to keep them from trying to reproduce deep bass.</description>
+	</definition>
+	<definition>
+		<name>Bass Reflex</name>
+		<description>A type of loudspeaker that uses a port or duct to augment the low-frequency response. Opinions vary widely over the "best" type of bass cabinet, but much has to do with how well a given design, such as a bass reflex is implemented.</description>
+	</definition>
+	<definition>
+		<name>Beaming</name>
+		<description>A tendency of a loudspeaker to concentrate the sound in a narrow path instead of spreading it.</description>
+	</definition>
+	<definition>
+		<name>Bessel crossover</name>
+		<description>A type of crossover design characterized by having a linear or maximally flat phase response.  Linear phase response results in constant time-delay (all frequencies within the passband are delayed the same amount). Consequently the value of linear phase is it reproduces a near-perfect step response with no overshoot or ringing. The downside of the Bessel  is a slow roll-off rate. The same circuit complexity in a Butterworth response rolls off much faster.</description>
+	</definition>
+	<definition>
+		<name>Bi-amplify</name>
+		<description>The use of two amplifiers, one for the lows, one for the highs in a speaker system. Could be built into the speaker design or accomplished with the use of external amplifiers and electronic crossovers.</description>
+	</definition>
+	<definition>
+		<name>Bi-wiring</name>
+		<description>The use of two pairs of speaker wire from the same amplifier to separate bass and treble inputs on the speaker.</description>
+	</definition>
+	<definition>
+		<name>Boomy</name>
+		<description>Listening term, refers to an excessive bass response that has a peak(s) in it.</description>
+	</definition>
+	<definition>
+		<name>Bright</name>
+		<description>Listening term. Usually refers to too much upper frequency energy.</description>
+	</definition>
+	<definition>
+		<name>Bridging</name>
+		<description>Combining both left and right stereo channels on an automotive amplifier into one higher powered mono channel. When an amplifier is bridged, the impedance that the amplifier actually "sees" is calculated based upon the output of both stereo channels. Here is a simple formula to help define this:</description>
+	</definition>
+	<definition>
+		<name>Bridged Mono Impedance</name>
+		<description>(Y / X)/2
+
+	Y = impedance of driver(s) (both drivers should be identical)
+	X = # of drivers in circuit
+	One 4 ohm sub in bridged mono is equal to hooking up two 2 ohm subs in stereo, one to each channel.</description>
+	</definition>
+	<definition>
+		<name>Butterworth crossover</name>
+		<description>A type of crossover circuit design having a maximally flat magnitude response, i.e., no amplitude ripple in the passband. This circuit is based upon Butterworth functions, also know as Butterworth polynomials.</description>
+	</definition>
+	<definition>
+		<name>Cabin gain</name>
+		<description>The low frequency boost normally obtained inside a vehicle interior when subs are properly mounted.</description>
+	</definition>
+	<definition>
+		<name>Capacitor</name>
+		<description>A device made up of two metallic plates separated by a dielectric (insulating material). Used to store electrical energy in the electrostatic field between the plates. It produces an impedance to an ac current.</description>
+	</definition>
+	<definition>
+		<name>Center Channel</name>
+		<description>In home theater, sound decoded from the stereo signal sent to a speaker mounted in front of the listener, specially designed to enhance voices and sound effects from a movie soundtrack. Used in car audio to help offset skewed stereo imaging due to seating positions in the automotive environment.</description>
+	</definition>
+	<definition>
+		<name>Channel Balance</name>
+		<description>In a stereo system, the level balance between left and right channels. Properly balanced, the image should be centered between the left-right speakers. In a home-theater system, refers to achieving correct balance between all the channels of the system.</description>
+	</definition>
+	<definition>
+		<name>Clipping</name>
+		<description>Refers to a type of distortion that occurs when an amplifier is driven into an overload condition. Usually the "clipped" waveform contains an excess of high-frequency energy. The sound becomes hard and edgy. Hard clipping is the most frequent cause of "burned out" tweeters. Even a low-powered amplifier or receiver driven into clipping can damage tweeters which would otherwise last virtually forever.</description>
+	</definition>
+	<definition>
+		<name>Cms</name>
+		<description>Mechanical suspension compliance of a driver, consisting of the spider and surround.</description>
+	</definition>
+	<definition>
+		<name>Co-axial</name>
+		<description>A speaker type that utilizes a tweeter mounted at the center of a woofer cone. The idea being to have the sound source through the full frequency range become "coincident".</description>
+	</definition>
+	<definition>
+		<name>Coaxial Driver</name>
+		<description>a speaker composed of two individual voice coils and cones; used for reproduction of sounds in two segments of the sound spectrum. See also triaxial driver.</description>
+	</definition>
+	<definition>
+		<name>Coherence</name>
+		<description>Listening term. Refers to how well integrated the sound of the system is.</description>
+	</definition>
+	<definition>
+		<name>Coloration</name>
+		<description>Listening term. A visual analog. A "colored" sound characteristic adds something not in the original sound. The coloration may be euphonically pleasant, but it is not as accurate as the original signal.</description>
+	</definition>
+	<definition>
+		<name>Compliance</name>
+		<description>The relative stiffness of a speaker suspension, specified as Vas.</description>
+	</definition>
+	<definition>
+		<name>Compression</name>
+		<description>In audio, compression means to reduce the dynamic range of a signal. Compression may be intentional or one of the effects of a system that is driven to overload.</description>
+	</definition>
+	<definition>
+		<name>Crossover</name>
+		<description>A frequency divider. Crossovers are used in speakers to route the various frequency ranges to the appropriate drivers. Additionally, many crossovers contain various filters to stabilize the impedance load of the speaker and or shape the frequency response. Some crossovers contain levels controls to attenuate various parts of the signal.</description>
+	</definition>
+	<definition>
+		<name>Crossover - Passive</name>
+		<description>A passive crossover uses capacitors, coils and resistors, usually at speaker level. A passive crossover is load dependent (the transition may not be very smooth or accurate if a different speaker is substituted for the one the crossover was designed for).</description>
+	</definition>
+	<definition>
+		<name>Crossover - Active</name>
+		<description>An active crossover is based on integrated circuits (ICs), discreet transistors or tubes. An active crossover is impedance buffered and gives a consistent and accurate transition regardless of load.</description>
+	</definition>
+	<definition>
+		<name>Crossover Slope</name>
+		<description>High and low pass filters used for speakers do not cut-off frequencies like brick walls. The rolloff occurs over a number of octaves. Common filter slopes for speakers are 1st through 4th order corresponding to 6db/oct to 24db/oct. For example, a 1st. order, 6db/oct high pass filter at 100hz will pass 6db less energy at 50Hz and 12db less energy at 25Hz. Within the common 1st through 4th filters there is an endless variety of types including Butterworth, Linkwitz-Riley, Bessel, Chebychev, etc. Salesmen and product literature will sometimes make claims of clear superiority for the filter used in the product they are trying to sell. Since the subject fills books, suffice it to say that there is no one best filter, it depends on application and intended outcome. Good designers use the filters required to get the optimum performance from the system.</description>
+	</definition>
+	<definition>
+		<name>Cross-talk</name>
+		<description>Unwanted breakthrough of one channel into another. Also refers to the distortion that occurs when some signal from a music source that you are not listening to leaks into the circuit of the source that you are listening to.</description>
+	</definition>
+	<definition>
+		<name>Current (I)</name>
+		<description>The flow of electrical charge measured in amperes.</description>
+	</definition>
+	<definition>
+		<name>DAC</name>
+		<description>A Digital to Audio Converter. Converts a digital bitstream to an analog signal. Can be a separate "box" that connects between a CD Transport or CD Player and a pre-amplifier.</description>
+	</definition>
+	<definition>
+		<name>Damping (Damping factor, etc.)</name>
+		<description>Refers to the ability of an audio component to "stop" after the signal ends. For example, if a drum is struck with a mallet, the sound will reach a peak level and then decay in a certain amount of time to no sound. An audio component that allows the decay to drag on too long has poor damping, and less definition than it should. An audio component that is overdamped does not allow the initial energy to reach the full peak and cuts the decay short. "Boomy" or "muddy" sound is often the result of underdamped systems. "Dry" or "lifeless" sound may be the result of an overdamped system.</description>
+	</definition>
+	<definition>
+		<name>Decibel (dB)</name>
+		<description>Named after Alexander Graham Bell. We perceive differences in volume level in a logarithmic manner. Our ears become less sensitive to sound as its intensity increases. Decibels are a logarithmic scale of relative loudness. A difference of approx. 1 dB is the minimum perceptible change in volume, 3 dB is a moderate change in volume, and about 10 dB is an apparent doubling of volume
+
+    0 dB is the threshold of hearing, 130 dB is the threshold of pain.
+    Whisper: 15-25 dB
+    Quiet background: about 35 dB
+    Normal home or office background: 40-60 dB
+    Normal speaking voice: 65-70 dB
+    Orchestral climax: 105 dB
+    Live Rock music: 120 dB+
+    Jet aircraft: 140-180 dB</description>
+	</definition>
+	<definition>
+		<name>Diaphragm</name>
+		<description>The part of a dynamic loudspeaker attached to the voice coil that moves and produces the sound. It usually has the shape of a cone or dome.</description>
+	</definition>
+	<definition>
+		<name>Diffraction</name>
+		<description>A change in the direction of a wave front that is caused by the wave moving past an obstacle.</description>
+	</definition>
+	<definition>
+		<name>Dipole</name>
+		<description>An open-back speaker that radiates sound equally front and rear. The front and rear waves are out of phase and cancellation will occur when the wavelengths are long enough to "wrap around". The answer is a large, wide baffle or to enclose the driver creating a monopole.</description>
+	</definition>
+	<definition>
+		<name>Direct Current (DC)</name>
+		<description>Current that moves in only one direction.</description>
+	</definition>
+	<definition>
+		<name>Dispersion</name>
+		<description>The spreading of sound waves as they leave a source. The spreading of sound waves as they leave a source.</description>
+	</definition>
+	<definition>
+		<name>Distortion</name>
+		<description>Anything that alters the musical signal. There are many forms of distortion, some of which are more audible than others. Distortion specs are often given for electronic equipment which are quite meaningless. As in all specifications, unless you have a thorough understanding of the whole situation, you will not be able to make conclusions about the sonic consequences.</description>
+	</definition>
+	<definition>
+		<name>Dolby Digital</name>
+		<description>Is a five-channel system consisting of left, center, right and left rear, right rear channels. All processing is done in the digital domain. Unlike Dolby Prologic in which the rear effects channels are frequency limited to approx. 100-7000Hz, Dolby Digital rear channels are specified to contain the full 20-20Khz frequency content. The AC3 standard also has a separate subwoofer channel for the lowest frequencies.</description>
+	</definition>
+	<definition>
+		<name>Dolby Digital EX Surround</name>
+		<description>Also referred to as Dolby Digital 6.1, adds a rear, center channel to the existing left, center, right and rear speakers. This format requires a 6.1 processor or receiver and DVDs that are 6.1 encoded.</description>
+	</definition>
+	<definition>
+		<name>Dolby Prologic</name>
+		<description>Is a four-channel system consisting of left, center, right and rear channel, (the single rear channel is usually played through two speakers).</description>
+	</definition>
+	<definition>
+		<name>Dome Tweeter</name>
+		<description>A high frequency speaker with a dome-shaped diaphragm.A high frequency speaker with a dome-shaped diaphragm.</description>
+	</definition>
+	<definition>
+		<name>Double (Dual) Voice Coil (DVC)</name>
+		<description>A voice coil with two windings, generally used in woofers. Each voice coil can be connected to a stereo channel, or both voice coils can be wired in parallel or series to a single channel.</description>
+	</definition>
+	<definition>
+		<name>DTS</name>
+		<description>Digital Theater System. A multi-channel encoding/decoding system. Used in some movie theaters. Also now included in some home-theater processors. A competitor to Dolby Digital.</description>
+	</definition>
+	<definition>
+		<name>DSP</name>
+		<description>Digital Signal Processing. DSP can be used to create equalization, compression, etc. of a digital signal.</description>
+	</definition>
+	<definition>
+		<name>DVD</name>
+		<description>Digital Video Disc or Digital Versatile Disc. A relatively new standard that seeks to combine better-than-laser-disc quality video with better-than-CD quality audio in a disc the size of a CD. Requires special players. Seems to be a viable candidate to replace both Laser Discs and CDs, but the jury is still out.</description>
+	</definition>
+	<definition>
+		<name>Dynamic Headroom</name>
+		<description>The ability of an audio device to respond to musical peaks. For example, an amplifier may only be capable of a sustained 100 watts, but may be able to achieve peaks of 200 watts for the fraction of a second required for an intense, quick sound. In this example the dynamic headroom would equal 3 db.</description>
+	</definition>
+	<definition>
+		<name>Dynamic range</name>
+		<description>The range between the loudest and the softest sounds that are in a piece of music, or that can be reproduced by a piece of audio equipment without distortion (a ratio expressed in decibels). In speech, the range rarely exceeds 40 dB; in music, it is greatest in orchestral works, where the range may be as much as 75 dB.</description>
+	</definition>
+	<definition>
+		<name>EBP</name>
+		<description>Efficiency Bandwidth Product. A guide that helps a designer determine whether a driver is more suitable for a sealed or ported enclosure. EBP of less than 50 indicates the driver should be used in a sealed, 50 - 90 indicates flexible design options, over 90 indicates best for a ported enclosure. EBP = Fs / Qes</description>
+	</definition>
+	<definition>
+		<name>Efficiency rating</name>
+		<description>The loudspeaker parameter that gives the level of sound output when measured at a prescribed distance with a standard level of electrical energy fed into the speaker. The loudspeaker parameter that gives the level of sound output when measured at a prescribed distance with a standard level of electrical energy fed into the speaker.</description>
+	</definition>
+	<definition>
+		<name>Electronic Crossover</name>
+		<description>Uses active circuitry to send signals to appropriate drivers. More efficient than passive crossovers. Uses active circuitry to send signals to appropriate drivers. More efficient than passive crossovers.</description>
+	</definition>
+	<definition>
+		<name>Electrostatic Speaker</name>
+		<description>A speaker that radiates sound from a large diaphragm that is suspended between high-voltage grids.</description>
+	</definition>
+	<definition>
+		<name>Equalizer</name>
+		<description>Electronic set of filters used to boost or attenuate certain frequencies.</description>
+	</definition>
+	<definition>
+		<name>Euphonic</name>
+		<description>Pleasing. As a descriptive audio term, usually refers to a coloration or inaccuracy that non-the-less may be sonically pleasing.</description>
+	</definition>
+	<definition>
+		<name>Extension</name>
+		<description>How extended a range of frequencies the device can reproduce accurately. Bass extension refers to how low a frequency tone will the system reproduce, high-frequency extension refers to how high in frequency will the system play.</description>
+	</definition>
+	<definition>
+		<name>Farad</name>
+		<description>The basic unit of capacitance. A capacitor has a value of one farad when it can store one coulomb of charge with one volt across it.</description>
+	</definition>
+	<definition>
+		<name>Fb</name>
+		<description>The tuned frequency of a ported box.</description>
+	</definition>
+	<definition>
+		<name>Fc or Fcb</name>
+		<description>The system resonance frequency of a driver in a sealed box. The system resonance frequency of a driver in a sealed box.</description>
+	</definition>
+	<definition>
+		<name>Filter</name>
+		<description>An electrical circuit or mechanical device that removes or attenuates energy at certain frequencies. . An electrical circuit or mechanical device that removes or attenuates energy at certain frequencies. .</description>
+	</definition>
+	<definition>
+		<name>Flat Response</name>
+		<description>The faithful reproduction of an audio signal; specifically, the variations in output level of less than 1 dB above or below a median level over the audio spectrum.</description>
+	</definition>
+	<definition>
+		<name>F3</name>
+		<description>The roll-off frequency at which the driver's response is down -3dB from the level of it's midband response.</description>
+	</definition>
+	<definition>
+		<name>Fletcher-Munson curve</name>
+		<description>Our sensitivity to sound depends on its frequency and volume. Human ears are most sensitive to sounds in the midrange. At lower volume levels humans are less sensitive to sounds away from the midrange, bass and treble sounds "seem" reduced in intensity at lower listening levels.</description>
+	</definition>
+	<definition>
+		<name>Free Air Resonance</name>
+		<description>The natural resonant frequency of a driver when operating outside an enclosure.</description>
+	</definition>
+	<definition>
+		<name>Frequency</name>
+		<description>The range of human hearing is commonly given as 20-20,000Hz (20Hz-20kHz). One hertz (Hz) represents one cycle per second, 20Hz represents 20 cycles per second and so on. Lower numbers are lower frequencies</description>
+	</definition>
+	<definition>
+		<name>Fs</name>
+		<description>The frequency of resonance for a driver in free air.</description>
+	</definition>
+	<definition>
+		<name>Full-range</name>
+		<description>A speaker designed to reproduce all or most of the sound spectrum.</description>
+	</definition>
+	<definition>
+		<name>Fundamental</name>
+		<description>The lowest frequency of a note in a complex wave form or chord.</description>
+	</definition>
+	<definition>
+		<name>Gain</name>
+		<description>To increase in level. The function of a volume control.</description>
+	</definition>
+	<definition>
+		<name>Golden Ratio</name>
+		<description>The ratio of depth, width, and height based on the Greek Golden Rectangle. Often applied to speaker boxes or listening room design. The Ratio: W = 1.0, Depth = 0.618W, Height = 1.618W. The ratio of depth, width, and height based on the Greek Golden Rectangle. Often applied to speaker boxes or listening room design. The Ratio: W = 1.0, Depth = 0.618W, Height = 1.618W.</description>
+	</definition>
+	<definition>
+		<name>Grain</name>
+		<description>Listening term. A sonic analog of the grain seen in photos. A sort of "grittiness" added to the sound.</description>
+	</definition>
+	<definition>
+		<name>Ground</name>
+		<description>Refers to a point of (usually) zero voltage, and can pertain to a power circuit or a signal circuit. In car audio, the single most important factor to avoid unwanted noise is finding and setting a good ground.</description>
+	</definition>
+	<definition>
+		<name>Haas effect</name>
+		<description>If sounds arrive from several sources, the ears and brain will identify only the nearest. In other words, if our ears receive similar sounds coming from various sources, the brain will latch onto the sound that arrives first. If the time difference is up to 50 milliseconds, the early arrival sound can dominate the later arrival sound, even if the later arrival is as much as 10 dB louder. The discovery of this effect is attributed to Halmut Haas in 1949.</description>
+	</definition>
+	<definition>
+		<name>Harmonics</name>
+		<description>Also called overtones, these are vibrations at frequencies that are multiples of the fundamental. Harmonics extend without limit beyond the audible range. They are characterized as even-order and odd-order harmonics. A second-order harmonic is two times the frequency of the fundamental; a third order is three times the fundamental; a fourth order is four times the fundamental; and so forth. Each even-order harmonic: second, fourth, sixth, etc.-is one octave or multiples of one octave higher than the fundamental; these even-order overtones are therefore musically related to the fundamental. Odd-order harmonics, on the other hand: third, fifth, seventh, and up-create a series of notes that are not related to any octave overtones and therefore may have an unpleasant sound. Audio systems that emphasize odd-order harmonics tend to have a harsh, hard quality.</description>
+	</definition>
+	<definition>
+		<name>Headroom</name>
+		<description>The ability of an amp to go beyond its rated power for short durations in order to reproduce musical peaks without distortion. This capability is often dependent on the power supply used in the design.</description>
+	</definition>
+	<definition>
+		<name>Head Unit</name>
+		<description>The in dash control center of a car audio system, usually consisting of an internal low powered amp, AM/FM receiver, and either a tape or CD player (or both).</description>
+	</definition>
+	<definition>
+		<name>Hearing Sensitivity</name>
+		<description>The human ear is less sensitive at low frequencies than in the midrange. Turn your volume knob down and notice how the bass seems to"disappear". To hear low bass requires an adequate SPL level. To hear 25Hz requires a much higher SPL level than to hear 250Hz. In the REAL world, low frequency sounds are reproduced by large objects; bass drums, string bass, concert grand pianos, etc. Listen to the exhaust rumble of a 454 cubic inch V8 engine vs. the whine of the little four banger. The growl of a lion vs. the meow of your favorite kitty. As frequency decreases we perceive more by feel than actual hearing and we lose our ability to hear exact pitch.</description>
+	</definition>
+	<definition>
+		<name>Hertz (Hz)</name>
+		<description>A unit of measurement denoting frequency, originally measured as Cycles Per Second, (CPS): 20 Hz = 20 CPS. Kilohertz (kHz) are hertz measured in multiples of 1,000.</description>
+	</definition>
+	<definition>
+		<name>High-Pass Filter</name>
+		<description>A circuit that allows high frequencies to pass but rolls off the low frequencies. When adding a subwoofer it is often desirable to roll-off the low frequencies to the main amplifiers and speakers. This will allow the main speakers to play louder with less distortion. High-pass filters used at speaker level are usually not very effective unless properly designed for a specific main speaker (see impedance below).</description>
+	</definition>
+	<definition>
+		<name>Hiss</name>
+		<description>Audio noise that sounds like air escaping from a tire.</description>
+	</definition>
+	<definition>
+		<name>Home Theater</name>
+		<description>An audio system designed to reproduce the theater sound experience while viewing film at home. Minimally consisting of a Dolby Pro Logic® surround sound receiver, left and right front speakers, a center channel speaker, and two surround speakers. These plus optional subwoofer(s), surround speaker(s), and digital formats such as Dolby Digital® can enhance the viewing experience by drastically improving the sound quality of movie soundtracks.</description>
+	</definition>
+	<definition>
+		<name>Hum</name>
+		<description>Audio electronic noise that has a steady low frequency pitch.</description>
+	</definition>
+	<definition>
+		<name>Imaging</name>
+		<description>Listening term. A good stereo system can provide a stereo image that has width, depth and height. The best imaging systems will define a nearly holographic re-creation of the original sound</description>
+	</definition>
+	<definition>
+		<name>Impedance</name>
+		<description>Impedance is a measure of electrical resistance specified in ohms. Speakers are commonly listed as 4 or 8 ohms but speakers are reactive devices and a nominal 8 ohm speaker might measure from below 4 ohms to 60 or more ohms over its frequency range. This varying impedance curve is different for each speaker model and makes it impossible to design a really effective "generic" speaker level high-pass filter. Active devices like amplifiers typically have an input impedance between about 10,000-100,000 ohms and the impedance is the same regardless of frequency.</description>
+	</definition>
+	<definition>
+		<name>Inductance (L)</name>
+		<description>The capability of a coil to store energy in a magnetic field surrounding it. It produces an impedance to an ac current. Inductors are commonly used in audio as low pass crossovers.</description>
+	</definition>
+	<definition>
+		<name>Infinite Baffle</name>
+		<description>A baffle that completely isolates the back wave of a driver from the front without a standard enclosure.</description>
+	</definition>
+	<definition>
+		<name>Infrasonic (Subsonic) Filter</name>
+		<description>A filter designed to remove extremely low frequency (25Hz or lower) noise from the audio signal. Useful for Ported box designs.</description>
+	</definition>
+	<definition>
+		<name>Interconnects</name>
+		<description>Cables that are used to connect components at a low signal level. Examples include CD player to receiver, pre-amplifier to amplifier, etc. Most interconnects use a shielded construction to prevent interference. Most audio interconnects use RCA connections although balanced interconnects use XLR connections.</description>
+	</definition>
+	<definition>
+		<name>Isobarik Enclosure</name>
+		<description>A trade name for a compound enclosure.</description>
+	</definition>
+	<definition>
+		<name>Jitter</name>
+		<description>A tendency towards lack of synchronization caused by electrical changes. Technically the unexpected (and unwanted) phase shift of digital pulses over a transmission medium. A discrepancy between when a digital edge transition is supposed to occur and when it actually does occur - think of it as nervous digital, or maybe a digital analogy to wow and flutter.</description>
+	</definition>
+	<definition>
+		<name>Kevlar</name>
+		<description>Material developed by Dupont that is has an exceptional strength to weight ratio. Used extensively in bullet-proof vests, skis, sailboat hulls, etc. In audio, used in many variations for speaker cones.</description>
+	</definition>
+	<definition>
+		<name>Kilohertz (kHz)</name>
+		<description>One thousand hertz.</description>
+	</definition>
+	<definition>
+		<name>Le</name>
+		<description>The inductance of a driver's voice coil, typically measured at 1 kHz in millihenries (mH).</description>
+	</definition>
+	<definition>
+		<name>Line Level</name>
+		<description>CD players, VCRs, Laserdisc Players etc., are connected in a system at line level, usually with shielded RCA type interconnects. Line level is before power amplification. In a system with separate pre-amp and power-amp the pre-amp output is line level. Many surround sound decoders and receivers have line level outputs as well.</description>
+	</definition>
+	<definition>
+		<name>Line-Source</name>
+		<description>A speaker device that is long and tall. Imagine a narrow dowel dropped flat onto the water's surface. The line-source has very limited vertical dispersion, but excellent horizontal dispersion.</description>
+	</definition>
+	<definition>
+		<name>Lobing</name>
+		<description>Any time more than one speaker device covers the same part of the frequency range there will be some unevenness in the output. (Picture the waves from one pebble dropped into a calm pool vs. two pebbles dropped several inches apart.) Lobing means that the primary radiation pattern(s) is at some angle above or below the centerline between the two drivers. Good crossover design takes this into account.</description>
+	</definition>
+	<definition>
+		<name>Low Frequency Extension</name>
+		<description>Manufacturers, writers and salespeople toss around all kinds of numbers and terminology that can be very confusing and misleading. "This $300 shoebox sized sub is flat to 20Hz". Right, in your dreams . . . How is that cheap, tiny box and driver going to reproduce a 56 foot wavelength with enough power to be heard? It will not to it. Good bass reproduction requires moving a lot of air and playback at realistic volumes. Remember the rule of needing to move four times the air to go down one octave. Example: You have a pair of good quality tower speakers with 10" woofers that produce good bass down to around 40Hz. The salesman is telling you that his little subwoofer with a single 10" woofer will extend your system down to 20Hz. If you've been paying attention, you know that his woofer will have to move eight times as much air as each of your 10" woofers, not likely. Adding that subwoofer to your system might give you more apparent bass energy, and in fact may help a little with movie special effects, but it is unlikely to extend bass response significantly.</description>
+	</definition>
+	<definition>
+		<name>Low-Pass Filter</name>
+		<description>A circuit that allows low frequencies to pass but rolls off the high frequencies. Most subwoofers have low-pass filters built in and many surround sound decoders have subwoofer outputs that have been low-pass filtered.</description>
+	</definition>
+	<definition>
+		<name>Loudness</name>
+		<description>Perceived volume. Loudness can be deceiving. For example, adding distortion will make a given volume level seem louder than it actually is.</description>
+	</definition>
+	<definition>
+		<name>Magnetic-Planar Speakers</name>
+		<description>A type of speaker that uses a flat diaphragm with a voice coil etched or bonded to it to radiate sound. If the magnets are both in front of and behind the diaphragm, it becomes a push-pull magnetic-planar.</description>
+	</definition>
+	<definition>
+		<name>Maximum power rating</name>
+		<description>A meaningless specification.</description>
+	</definition>
+	<definition>
+		<name>Microfarads (mF)</name>
+		<description>A measurement of capacitance.</description>
+	</definition>
+	<definition>
+		<name>Midbass</name>
+		<description>Mid frequency bass, usually frequencies just above the sub-bass range, from around 100 - 400 Hz or so.</description>
+	</definition>
+	<definition>
+		<name>Midrange</name>
+		<description>A speaker, (driver),  used to reproduce the middle range of frequencies.  A midrange is combined with a woofer for low frequencies and a tweeter for high frequencies to form a complete, full-range system.</description>
+	</definition>
+	<definition>
+		<name>Millihenries (mH)</name>
+		<description>A measurement of inductance.</description>
+	</definition>
+	<definition>
+		<name>Monopole</name>
+		<description>Any speaker that encloses the backwave of the speaker device even though part of this backwave may be released via. a port or duct. The primary radiation at most frequencies will be from the driver front. If the driver is not enclosed it becomes a dipole.</description>
+	</definition>
+	<definition>
+		<name>MOSFET</name>
+		<description>Metal Oxide Semiconductor Field Effect Transistors. Used in most modern, quality car audio amplifiers in the power supply (and sometimes in the output stage). MOSFET's run cooler than normal bipolar transistors, and have a faster switching speed.</description>
+	</definition>
+	<definition>
+		<name>Muddy</name>
+		<description>Listening term. A sound that is poorly defined, sloppy or vague. For example, a "muddy" bass is often boomy with all the notes tending to run together.</description>
+	</definition>
+	<definition>
+		<name>Muting</name>
+		<description>To greatly decrease the volume level. Many receivers and pre-amplifiers have a muting control which allows the volume level to be cut way down without changing the master volume control. Great for when the phone rings.</description>
+	</definition>
+	<definition>
+		<name>Nonlinearity</name>
+		<description>What goes into a system comes out changed by its passage through that system-in other words, distorted. The ideal of an audio component and an audio system is to be linear, or nondistorting, with the image on one side of the mirror identical to the image on the other side.</description>
+	</definition>
+	<definition>
+		<name>Octave</name>
+		<description>An octave is a doubling or halving of frequency. 20Hz-40Hz is often considered the bottom octave. Each octave you add on the bottom requires that your speakers move four times as much air!</description>
+	</definition>
+	<definition>
+		<name>Ohm</name>
+		<description>A unit of electrical resistance or impedance.</description>
+	</definition>
+	<definition>
+		<name>Ohm's Law</name>
+		<description>The basic law of electric circuits. It states that the current [I] in amperes in a circuit is equal to the voltage [E] in volts divided by the resistance [R] in ohms; thus, I = E/R.</description>
+	</definition>
+	<definition>
+		<name>Out of Phase</name>
+		<description>When speakers are mounted in reverse polarity, i.e., one speaker is wired +/+ and -/- from the amp and the other is wired +/- and -/+. Bass response will be very thin due to cancellation.</description>
+	</definition>
+	<definition>
+		<name>Output</name>
+		<description>The sound level produced by a loudspeaker. The sound level produced by a loudspeaker.</description>
+	</definition>
+	<definition>
+		<name>Overload</name>
+		<description>A condition in which a system is given too high of an input level. A common cause of distortion or product failure.</description>
+	</definition>
+	<definition>
+		<name>Overtones</name>
+		<description>See Harmonics.</description>
+	</definition>
+	<definition>
+		<name>Passive Crossover</name>
+		<description>Uses inductors (coils) and capacitors to direct proper frequencies to appropriate drivers. These crossover systems can be simple (First Order = 1 component @ -6 dB/octave slope) to complex (Fourth Order = 4 components @ -24 dB/octave slope).</description>
+	</definition>
+	<definition>
+		<name>Passive Radiator</name>
+		<description>A device that looks just like an ordinary driver, except it has no magnet or voice coil. A passive radiator is usually a highly compliant device, with a similar cone material and surround found on regular active drivers. The radiator must usually be at least as large (or larger) than the driver it is aligned with. The passive radiator is tuned to Fb and used in place of a port.</description>
+	</definition>
+	<definition>
+		<name>PCM</name>
+		<description>Pulse Code Modulation. A means of digital encoding.</description>
+	</definition>
+	<definition>
+		<name>Pe</name>
+		<description>Driver's rated RMS power handling capability.</description>
+	</definition>
+	<definition>
+		<name>Peak</name>
+		<description>The maximum amplitude of a voltage or current.</description>
+	</definition>
+	<definition>
+		<name>Peak power rating</name>
+		<description>Another meaningless specification unless references are given..</description>
+	</definition>
+	<definition>
+		<name>Peak-to-Peak power rating</name>
+		<description>See above.</description>
+	</definition>
+	<definition>
+		<name>Phase Coherence</name>
+		<description>The relationship and timing of sounds that come from different drivers (subs, mids, tweets) mounted in different locations.</description>
+	</definition>
+	<definition>
+		<name>Phase Distortion</name>
+		<description>A type of audible distortion caused by time delay between various parts of the signal.</description>
+	</definition>
+	<definition>
+		<name>Planar Source</name>
+		<description>Most electrostatics and magnetic planars have a large surface area. Think of a wide board dropped flat onto the water surface. The sound can be extremely coherent, but the listening window is effectively limited to being directly on-axis of both the left and right planar speaker.</description>
+	</definition>
+	<definition>
+		<name>Point-Source</name>
+		<description>Most multi-unit loudspeakers try to approximate a point-source. Think of a pebble dropped into the water and the expanding wave pattern away from impact. Obviously it is difficult to integrate multiple point-sources into a truly coherent expanding wave. The best designs do quite well with careful driver engineering and crossover development.</description>
+	</definition>
+	<definition>
+		<name>Polarity</name>
+		<description>A speaker, for example, has a positive and a negative input terminal. Connecting a battery directly to the speaker will result in the diaphragm moving outward. If you reverse the battery leads, the diaphragm will move inward. Caution: Too high of a voltage battery will also burn out the speaker!</description>
+	</definition>
+	<definition>
+		<name>Ported Enclosure</name>
+		<description>A type of speaker enclosure that uses a duct or port to improve efficiency at low frequencies.</description>
+	</definition>
+	<definition>
+		<name>Power (P)</name>
+		<description>The time rate of doing work or the rate at which energy is used. One equation for Power:
+
+	P = Volts^2 / Impedance</description>
+	</definition>
+	<definition>
+		<name>Push-Pull Configuration</name>
+		<description>One driver is mounted normally, the second is mounted so that it faces into the enclosure, both sharing the same internal volume and wired out of phase with one another. Although electrically out of phase with one another, the drivers are acoustically in phase since they move in the same direction. This alignment theoretically reduces second order harmonic distortion.</description>
+	</definition>
+	<definition>
+		<name>Push-pull</name>
+		<description>Most common type of amplification that amplifies the negative and positive sides of the waveform separately. Allows for much higher power output than single-ended.</description>
+	</definition>
+	<definition>
+		<name>Pre-amplifier</name>
+		<description>Or Pre-amp is a device that takes a source signal, such as from a turntable, tape-deck or CD player, and passes this signal on to a power-amplifier(s). The pre-amp may have a number of controls such as source selector switches, balance, volume and possibly tone-controls.</description>
+	</definition>
+	<definition>
+		<name>Radio-frequency interference (RFI)</name>
+		<description>Radio-frequency sound waves can be caused by many sources including; shortwave radio equipment, household electrical line, computers and many other electronic devices. RFI sometimes interferes with audio signals, causing noise and other distortions.</description>
+	</definition>
+	<definition>
+		<name>RCA Connector</name>
+		<description>"Phono" plugs, used primarily as low-level connections between Phonographs/CD players/Tuners/Recievers/Amplifiers</description>
+	</definition>
+	<definition>
+		<name>Receiver</name>
+		<description>An audio component that combines a pre-amplifier, amplifier(s) and tuner in one chassis. A Dolby Prologic Receiver also contains a Dolby Prologic decoder for surround sound.</description>
+	</definition>
+	<definition>
+		<name>Resistance (Re)</name>
+		<description>In electrical or electronic circuits, a characteristic of a material that opposes the flow of electrons. Speakers have resistance that opposes current.</description>
+	</definition>
+	<definition>
+		<name>Resonant frequency</name>
+		<description>Any system has a resonance at some particular frequency. At that frequency, even a slight amount of energy can cause the system to vibrate. A stretched piano string, when plucked, will vibrate for a while at a certain fundamental frequency. Plucked again, it will again vibrate at that same frequency. This is its natural or resonant frequency. While this is the basis of musical instruments, it is undesirable in music-reproducing instruments like audio equipment.</description>
+	</definition>
+	<definition>
+		<name>Ribbon Speaker</name>
+		<description>A type of speaker that uses a pleated conductor suspended between magnets. Most true ribbons are tweeters only. Sometimes confused with magnetic-planar speakers.</description>
+	</definition>
+	<definition>
+		<name>RMS (root-mean-square)</name>
+		<description>The square root of the mean of the sum of the squares. Commonly used as the effective value of measuring a sine wave's electrical power. A standard in amplifier measurements.</description>
+	</definition>
+	<definition>
+		<name>Roll-off (cut-off)</name>
+		<description>The attenuation that occurs at the lower or upper frequency range of a driver, network, or system. The roll-off frequency is usually defined as the frequency where response is reduced by -3 dB.</description>
+	</definition>
+	<definition>
+		<name>Satellite</name>
+		<description>A satellite speaker is usually fairly small, and does not reproduce the lowest frequencies. Usually meant to be used with a woofer or subwoofer.</description>
+	</definition>
+	<definition>
+		<name>Sd</name>
+		<description>The effective piston area of a driver. The effective piston area of a driver.</description>
+	</definition>
+	<definition>
+		<name>Sealed enclosure</name>
+		<description>An air tight enclosure that completely isolates the back wave of the driver from the front. Very tight, defined sound (with Qtc = 0.707) with very good transient response and power handling.</description>
+	</definition>
+	<definition>
+		<name>Sensitivity</name>
+		<description>A measurement of how much power is required for a loudspeaker to achieve a certain output level. The general standard used is on-axis SPL (Sound Pressure Level) at 1 watt input, 1 meter distance.</description>
+	</definition>
+	<definition>
+		<name>Signal-to-noise (SN) Ratio</name>
+		<description>The range or distance between the noise floor (the noise level of the equipment itself) and the music signal.</description>
+	</definition>
+	<definition>
+		<name>Sine wave</name>
+		<description>The waveform of a pure alternating current or voltage. It deviates about a zero point to a positive value and a negative value. Audio signals are sine waves or combinations of sine waves. The waveform of a pure alternating current or voltage. It deviates about a zero point to a positive value and a negative value. Audio signals are sine waves or combinations of sine waves.</description>
+	</definition>
+	<definition>
+		<name>Single-ended</name>
+		<description>Type of amplification often, (but not always), using vacuum tubes. Typically low power output, low damping factor and relatively high distortion. Single-ended enthusiasts claim that the sound quality is more "real".</description>
+	</definition>
+	<definition>
+		<name>Sound Pressure Level (Spl)</name>
+		<description>Given in decibels (DB) is an expression of loudness or volume. A 10db increase in SPL represents a doubling in volume. Live orchestral music reaches brief peaks in the 105db range and live rock easily goes over 120db.</description>
+	</definition>
+	<definition>
+		<name>Soundstage</name>
+		<description>A listening term the refers to the placement of a stereo image in a fashion that replicates the original performance. A realistic soundstage has proportional width, depth and height.</description>
+	</definition>
+	<definition>
+		<name>Sound Waves</name>
+		<description>Sound waves can be thought of like the waves in water. Frequency determines the length of the waves; amplitude or volume determines the height of the waves. At 20Hz, the wavelength is 56 feet long! These long waves give bass its penetrating ability, (why you can hear car boomers blocks away).</description>
+	</definition>
+	<definition>
+		<name>Speaker Level</name>
+		<description>Taken from the speaker terminals. This signal has already been amplified.</description>
+	</definition>
+	<definition>
+		<name>Spectral balance</name>
+		<description>Balance across the entire frequency spectrum of the audio range.</description>
+	</definition>
+	<definition>
+		<name>Spider</name>
+		<description>The flexible material that supports the former, voice coil, and inside portion of the cone within the speaker frame.</description>
+	</definition>
+	<definition>
+		<name>Standing wave</name>
+		<description>A buildup of sound level at a particular frequency that is dependent upon the dimensions of a resonant room, car interior, or enclosure. It occurs when the rate of energy loss equals the rate of energy input into the system. This is what you hear when you listen into a sea shell.</description>
+	</definition>
+	<definition>
+		<name>Stereo</name>
+		<description>From the Greek meaning solid. The purpose of stereo is not to give you separate right and left channels, but to provide the illusion of a three-dimensional, holographic image between the speakers.</description>
+	</definition>
+	<definition>
+		<name>Subwoofer</name>
+		<description>A speaker designed exclusively for low-frequency reproduction. A true subwoofer should be able to at least reach into the bottom octave (20-40Hz). There are many "subwoofers" on the market that would be more accurately termed "woofers".</description>
+	</definition>
+	<definition>
+		<name>Surround (suspension)</name>
+		<description>The outer suspension of a speaker cone; holds the diaphragm in place but allows it to move when activated. Usually made of foam or rubber.</description>
+	</definition>
+	<definition>
+		<name>Surround Sound</name>
+		<description>Sound extracted from the stereo signal sent to smaller rear or side speakers used in a home theater.</description>
+	</definition>
+	<definition>
+		<name>Thiele/Small parameters</name>
+		<description>The numbers that specify the behavior of drivers, as defined and analyzed by two engineers, Neville Thiele and Richard Small.</description>
+	</definition>
+	<definition>
+		<name>THX</name>
+		<description>Refers to a series of specifications for surround sound systems. Professional THX is used in commercial movie theaters. Home THX specifications are not published and manufacturers must sign non-disclosure waivers before submitting their products for THX certification. Manufacturers that receive certification for their products must pay a royalty on units sold.</description>
+	</definition>
+	<definition>
+		<name>Timbre</name>
+		<description>The quality of a sound that distinguishes it from other sounds of the same pitch and volume.  The distinctive tone of an instrument or a singing voice.</description>
+	</definition>
+	<definition>
+		<name>Timbral</name>
+		<description>Refers to the overall frequency balance of a system. In a perfect world, all systems would have complete tonal neutrality. With current technology, this ideal is approached but not met. Listening to many equally "good" speakers will reveal that some sound warmer than others, some sound brighter etc. In a surround sound system it is important that all speakers have a close timbral match for the highest degree of sonic realism.</description>
+	</definition>
+	<definition>
+		<name>Total harmonic distortion (THD)</name>
+		<description>Refers to a device adding harmonics that were not in the original signal. For example: a device that is fed a 20Hz sine wave that is also putting out 40Hz, 80Hz etc. Not usually a factor in most modern electronics, but still a significant design problem in loudspeakers.</description>
+	</definition>
+	<definition>
+		<name>Transducer</name>
+		<description>A device that converts one form of energy to another. Playback transducers are the phono cartridge, which changes mechanical vibrations into electrical energy, and the loudspeakers, which change it back, from electrical energy coming from the amp to mechanical movement of the diaphragm, causing audible pressure changes in the air.</description>
+	</definition>
+	<definition>
+		<name>Transmission Line</name>
+		<description>Also referred to as a T-line. A type of bass cabinet in which the back wave follows a relatively long, usually damped path before being ported to the outside. T-lines are usually rather large and costly cabinets to manufacture. Opinions vary widely over the "best" type of bass cabinet, but much has to do with how well a given design, such as a transmission line is implemented.</description>
+	</definition>
+	<definition>
+		<name>Transient response</name>
+		<description>The ability of a component to respond quickly and accurately to transients. Transient response affects reproduction of the attack and decay characteristics of a sound.</description>
+	</definition>
+	<definition>
+		<name>Transparency</name>
+		<description>Listening term. An analog that can be best "pictured" in photography. The more "transparent" the sound, the clearer the auditory picture.</description>
+	</definition>
+	<definition>
+		<name>Transients</name>
+		<description>Instantaneous changes in dynamics, producing steep wave fronts.</description>
+	</definition>
+	<definition>
+		<name>Tri-wiring</name>
+		<description>The use of three  pairs of speaker wire from the same amplifier to separate bass, midrange and treble inputs on the speakers.</description>
+	</definition>
+	<definition>
+		<name>Tuning Frequency</name>
+		<description>The helmholtz resonant frequency of a box. Also refers to the resonant frequency of other types of systems.</description>
+	</definition>
+	<definition>
+		<name>Tweeter</name>
+		<description>A speaker,  (driver), used to reproduce the higher range of frequencies. To form a full-range system, a tweeter needs to be combined with a woofer, (2-way system), or a woofer and midrange, (3-way system).</description>
+	</definition>
+	<definition>
+		<name>Unity gain</name>
+		<description>A circuit with unity gain will not increase or decrease the volume level.</description>
+	</definition>
+	<definition>
+		<name>Vas</name>
+		<description>The equivalent volume of compliance, which specifies a volume of air having the same compliance as the suspension system of a driver.</description>
+	</definition>
+	<definition>
+		<name>Vb</name>
+		<description>The total box volume, usually in cubic feet or liters. Used specifically in sealed and ported designs.</description>
+	</definition>
+	<definition>
+		<name>Vf</name>
+		<description>The front volume of a bandpass design. The front volume of a bandpass design.</description>
+	</definition>
+	<definition>
+		<name>Vr</name>
+		<description>The rear volume of a bandpass design.</description>
+	</definition>
+	<definition>
+		<name>Voice coil</name>
+		<description>The wire wound around the speaker former. The former is mechanically connected to the speaker cone and causes the cone to vibrate in response to the audio current in the voice coil.</description>
+	</definition>
+	<definition>
+		<name>Volt (E)</name>
+		<description>The unit of measurement used to measure how much "pressure" is used to force electricity through a circuit.		</description>
+	</definition>
+	<definition>
+		<name>Warmth</name>
+		<description>A listening term. The opposite of cool or cold. In terms of frequency, generally considered the range from approx. 150Hz-400Hz. A system with the "proper" warmth will sound natural within this range.</description>
+	</definition>
+	<definition>
+		<name>Wattage</name>
+		<description>Is the unit of power used to rate the output of audio amplifiers. For a wattage number to have meaning the distortion level and impedance must also be specified.</description>
+	</definition>
+	<definition>
+		<name>Wavelength</name>
+		<description>The distance the sound wave travels to complete one cycle.  The distance between one peak or crest of a sine wave and the next corresponding peak or crest. The wavelength of any frequency may be found by dividing the speed of sound by the frequency. (Speed of sound at sea level is 331.4 meters/second or 1087.42 feet/second).</description>
+	</definition>
+	<definition>
+		<name>Woofer</name>
+		<description>A speaker, (driver), used for low-frequency reproduction.  Usually larger and heavier than a midrange or tweeter.</description>
+	</definition>
+	<definition>
+		<name>XLR</name>
+		<description>A type of connector used for balanced lines. Used for microphones, balanced audio components and the AES/EBU digital connection.</description>
+	</definition>
+	<definition>
+		<name>Xmax</name>
+		<description>The maximum linear cone excursion of a driver, measured in inches or millimeters.  Caution; this should be specified as linear excursion one way, but many manufacturers list the the total excursion both ways which falsely doubles the value!</description>
+	</definition>
+	<definition>
+		<name>Y-Adapter</name>
+		<description>Any type of connection that splits a signal into two parts. An example would be a connector with one male RCA jack on one end, and two female RCA jacks on the other end.</description>
+	</definition>
+	<definition>
+		<name>Zobel Filter</name>
+		<description>A series circuit consisting of a resistance and capacitance. This filter is placed in parallel with a speaker driver to flatten what would otherwise be a rising impedance with frequency.</description>
+	</definition>
+</dictionary>

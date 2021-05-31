@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+         declare-styleable name="sliderbox"> <attr name="max" format="integer" 
+		/> <attr name="min" format="integer" /> <attr name="units" format="string" 
+		/> <attr name="attr" format="string" /> </declare-styleable
+    -->
+    <declare-styleable name="databox">
+        <attr name="units" format="string" />
+        <attr name="attr" format="string" />
+        <attr name="text" format="string" />
+        <attr name="subtext" format="string" />
+        <attr name="edittable" format="boolean" />
+        <attr name="allownegative" format="boolean" />
+        <attr name="largebox" format="boolean" />
+        <attr name="seekbar" format="boolean" />
+        <attr name="min" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="unitconv" format="string" />
+        <attr name="boxonly" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="sliderbox">
+        <attr name="slider_initialvalue" format="float" />
+        <attr name="slider_units" format="string" />
+        <attr name="slider_attr" format="string" />
+        <attr name="slider_info" format="string" />
+        <attr name="slider_text" format="string" />
+        <attr name="slider_subtext" format="string" />
+        <attr name="slider_edittable" format="boolean" />
+        <attr name="slider_allownegative" format="boolean" />
+        <attr name="slider_largebox" format="boolean" />
+        <attr name="slider_seekbar" format="boolean" />
+        <attr name="slider_min" format="integer" />
+        <attr name="slider_max" format="integer" />
+        <attr name="slider_unitconv" format="string" />
+        <attr name="slider_boxonly" format="boolean" />
+        <attr name="slider_changebounds" format="boolean" />
+        <attr name="slider_scale" format="integer" />
+        <attr name="slider_databoxunits" format="string" />
+        <attr name="slider_decimals" format="integer" />
+        <attr name="slider_hidenegativesign" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="arrowbox">
+        <attr name="arrow_attr" format="string" />
+    </declare-styleable>
+    <declare-styleable name="subselector">
+        <attr name="subsel_full" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="encselector">
+        <attr name="encsel_full" format="boolean" />
+    </declare-styleable>
+	<declare-styleable name="boundedlinearlayout">
+        <attr name="bll_width" format="integer" />
+    </declare-styleable>
+    <style name="dialogstyle" parent="@android:style/Theme.Dialog">
+        <item name="android:background">#FF0000</item>
+    </style>
+
+</resources>

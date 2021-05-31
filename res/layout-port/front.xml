@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:id="@+id/widget49"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_background_tiled"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_midground_tiled_center"
+        android:gravity="center"
+        android:paddingBottom="10dp" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/gauge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Wiring Gauge"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/crossover"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Crossover Calculator"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/gain"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Amp. &amp; Power"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/dbmeter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Audio Analysis"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/resistor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Resistors and LEDs"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/wiring"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Subwoofer Wiring"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/tone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Tone Generator"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/enclosure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Enclosure Builder"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/definitions"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Definitions"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/speakersize"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Car Speaker Sizes"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/widget30"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/suggestions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Suggestions"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/getPro"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get the Pro Version"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/resistor5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resistors and LEDs"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/spectrum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spectrum Analyzer"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/frontlogo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:adjustViewBounds="true"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.AudioToolkit.CustomViews.BoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/dialog_frame_dark"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_margin="12dp"
+    app:bll_width="@integer/dialogMaxWidth" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/dia_screenshot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/dia_graphroot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_light"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/dia_graphtext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="TEST" />
+        </LinearLayout>
+    </ScrollView>
+
+</com.AudioToolkit.CustomViews.BoundedLinearLayout>

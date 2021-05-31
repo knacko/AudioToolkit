@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.AudioToolkit.CustomViews.BoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.AudioToolkitPro"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/dialog_frame_dark"
+    android:orientation="vertical"
+    app:bll_width="@integer/dialogMaxWidth" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Enclosure:"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/enc_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/textfield"
+                android:hint="Name"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="#FFFFFFFF"
+                android:textSelectHandle="@drawable/textfield_cursor"
+                android:textSelectHandleLeft="@drawable/textfield_cursor_left"
+                android:textSelectHandleRight="@drawable/textfield_cursor_right" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <Button
+                    android:id="@+id/diagram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text="Diagram"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/diagram"
+                    android:text="Enclosure Type..."
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/specs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.AudioToolkit.CustomViews.Databox
+                    android:id="@+id/volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:attr="Volume"
+                    app:unitconv="1,0.000578703,0.016387064"
+                    app:units="cu.inches,cu.feet,litres" />
+
+                <com.AudioToolkit.CustomViews.Databox
+                    android:id="@+id/thickness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:attr="Wall Thickness"
+                    app:unitconv="1,25.4"
+                    app:units="inches,millimeters" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-3dp"
+                    android:layout_marginTop="-10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Type: "
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/sealed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:orientation="horizontal"
+                            android:text="Sealed  " />
+
+                        <RadioButton
+                            android:id="@+id/ported"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:text="Ported  " />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/port_specs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <com.AudioToolkit.CustomViews.Databox
+                        android:id="@+id/port_freq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:attr="Port Freq."
+                        app:units="hertz" />
+
+                    <com.AudioToolkit.CustomViews.Databox
+                        android:id="@+id/port_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:attr="Port Area"
+                        app:unitconv="1,6.4516"
+                        app:units="sq.inches,sq.centimeters" />
+
+                    <com.AudioToolkit.CustomViews.Databox
+                        android:id="@+id/port_flare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:attr="Port Flare Radius"
+                        app:unitconv="1,25.4"
+                        app:units="inches,millimeters" />
+
+                    <com.AudioToolkit.CustomViews.Databox
+                        android:id="@+id/port_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:attr="Num. of Ports"
+                        app:units="" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp" >
+
+                    <Button
+                        android:id="@+id/calculate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="Calculate"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="  Clear  "
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rect"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/rect_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Length: " />
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/rect_width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Width: " />
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/rect_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Height: " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wedge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/wedge_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Top: " />
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/wedge_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Bottom: " />
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/wedge_width"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Width: " />
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/wedge_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Height: " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cyl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/cyl_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Radius: " />
+
+                <com.AudioToolkit.CustomViews.Arrowbox
+                    android:id="@+id/cyl_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:arrow_attr="Length: " />
+            </LinearLayout>
+
+            <com.AudioToolkit.CustomViews.Databox
+                android:id="@+id/port_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:attr="Port Length"
+                app:edittable="false"
+                app:unitconv="1,2.54,25.4"
+                app:units="inches,centimeters,millimeters" />
+
+            <RelativeLayout
+                android:id="@+id/bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="   Save   "
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text="  Cancel  "
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</com.AudioToolkit.CustomViews.BoundedLinearLayout>
