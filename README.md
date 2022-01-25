@@ -2,8 +2,8 @@
 
 This was a former Android Play app that provided numerous useful tools and calculators when setting up a stereo. It was updated from around 2006 to 2012, and active until 2018. The free version had over 150k downloads, and the Pro version ($2) had about 7500 downloads. The APK is still available on some non-Play app stores. Search for AudioToolkit, or AudioToolkitPro (though no responsibility is taken for cracked APKs).
 
-![Main screen](/images/img1.jpg)  
-![Main screen](/images/img2.jpg)
+![Main screen](/images/img1.png)  
+![Main screen](/images/img2.png)
 
 From the original Play Store description:
 
